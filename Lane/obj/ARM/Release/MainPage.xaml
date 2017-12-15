@@ -1,0 +1,544 @@
+﻿<Page
+    x:Class="Lane.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Lane"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <SplitView x:ConnectionId='1'
+             HorizontalAlignment="Stretch"
+             VerticalAlignment="Stretch"
+                   x:Name="menuSplitPane"
+                   DisplayMode="CompactInline"
+                   CompactPaneLength="50"
+                   OpenPaneLength="150" PaneBackground="#FF211D1D" Foreground="#FF3A3232"
+                   >
+            <SplitView.Pane>
+                <StackPanel Background="#FF874915">
+                    <Button x:ConnectionId='2' x:Name="hamburgerButton" 
+                            FontFamily="Segoe MDL2 Assets" 
+                            Content="&#xE700;"
+                            Width="50"
+                            Height="50"
+                                                         
+                            Background="Transparent"
+                            >
+                    </Button>
+                    <ListView x:ConnectionId='3'                                             >
+                        <ListViewItem x:ConnectionId='4' x:Name="menetrend">
+                            <StackPanel Margin="4,10,10,10" Orientation="Horizontal">
+                                <SymbolIcon Symbol="Map"/>
+                                <TextBlock Margin="20,0,0,0" Text="Jaratok"></TextBlock>
+                            </StackPanel>
+                        </ListViewItem>
+                        <ListViewItem x:ConnectionId='5' x:Name="megallokszerint">
+                            <StackPanel Margin="4,10,10,10" Orientation="Horizontal">
+                                <SymbolIcon Symbol="MapPin"/>
+                                <TextBlock Margin="20,0,0,0" Text="Megallok"></TextBlock>
+                            </StackPanel>
+                        </ListViewItem>
+                        <ListViewItem x:ConnectionId='6' x:Name="kedvencek">
+                            <StackPanel Margin="4,10,10,10" Orientation="Horizontal">
+                                <SymbolIcon Symbol="Favorite"/>
+                                <TextBlock Margin="20,0,0,0" Text="Kedvencek"></TextBlock>
+                            </StackPanel>
+                        </ListViewItem>
+                        <ListViewItem x:ConnectionId='7' x:Name="elhagytam">
+                            <StackPanel Margin="4,10,10,10" Orientation="Horizontal">
+                                <SymbolIcon Symbol="People"/>
+                                <TextBlock Margin="20,0,0,0" Text="Elhagytam"></TextBlock>
+                            </StackPanel>
+                        </ListViewItem>
+                        <ListViewItem x:ConnectionId='8' x:Name="leiras">
+                            <StackPanel Margin="4,10,10,10" Orientation="Horizontal">
+                                <SymbolIcon Symbol="List"/>
+                                <TextBlock Margin="20,0,0,0" Text="Leírás"></TextBlock>
+                            </StackPanel>
+                        </ListViewItem>
+                        <ListViewItem x:ConnectionId='9' x:Name="elerhetoseg">
+                            <StackPanel Margin="4,10,10,10" Orientation="Horizontal">
+                                <SymbolIcon Symbol="Mail"/>
+                                <TextBlock Margin="20,0,0,0" Text="Elérhetőség"></TextBlock>
+                            </StackPanel>
+                        </ListViewItem>
+                    </ListView>
+                </StackPanel>
+            </SplitView.Pane>
+            <Grid Background="Beige">
+                <ScrollViewer x:ConnectionId='10' x:Name="kedvencekcrollvieer" IsEnabled="False">
+                    <StackPanel x:ConnectionId='29' Visibility="Collapsed" x:Name="kedvencekleiras">
+                        <TextBlock Foreground="#FF333833" Text="Kedvencek" FontSize="40" HorizontalAlignment="Center"></TextBlock>
+                        <StackPanel Orientation="Vertical">
+                            <TextBlock Foreground="#FF333833"  Margin="10" FontSize="30" Text="Új felvétele:"></TextBlock>
+                            <TextBlock Foreground="#FF333833"  Margin="10,0" FontSize="15" Text="Csak egyet válassz!"></TextBlock>
+                            <TextBlock Foreground="#FF333833"  Margin="10" FontSize="25" Text="Megállók:"></TextBlock>
+                            <ComboBox x:ConnectionId='35' Margin="10" x:Name="kedvencekmegallokcombobox"                                                              >
+                                <ComboBoxItem Content=""/>
+                                <ComboBoxItem Content="Acél u."/>
+                                <ComboBoxItem Content="Akácfa u."/>
+                                <ComboBoxItem Content="Alkotmány u."/>
+                                <ComboBoxItem Content="Alsó kikötő sor"/>
+                                <ComboBoxItem Content="Anna-kút (Tisza Lajos krt.)"/>
+                                <ComboBoxItem Content="Apály  u."/>
+                                <ComboBoxItem Content="Aranyosi utca"/>
+                                <ComboBoxItem Content="Artézi kút"/>
+                                <ComboBoxItem Content="Auchan Áruház"/>
+                                <ComboBoxItem Content="Árok u."/>
+                                <ComboBoxItem Content="Back Bernát utca"/>
+                                <ComboBoxItem Content="Bajai út"/>
+                                <ComboBoxItem Content="Bakay Nándor utca"/>
+                                <ComboBoxItem Content="Baktó,Völgyérhát u."/>
+                                <ComboBoxItem Content="Balajthy utca"/>
+                                <ComboBoxItem Content="Balatoni u."/>
+                                <ComboBoxItem Content="Barázda u."/>
+                                <ComboBoxItem Content="Bartók tér"/>
+                                <ComboBoxItem Content="Basahíd utca"/>
+                                <ComboBoxItem Content="Belvárosi temető"/>
+                                <ComboBoxItem Content="Berlini krt."/>
+                                <ComboBoxItem Content="Beszterce utca"/>
+                                <ComboBoxItem Content="Bécsi krt."/>
+                                <ComboBoxItem Content="Béketelep, MEDIKÉMIA"/>
+                                <ComboBoxItem Content="Béketelepi Ált. Isk."/>
+                                <ComboBoxItem Content="Bognár u."/>
+                                <ComboBoxItem Content="Brassói utca"/>
+                                <ComboBoxItem Content="Budapesti krt."/>
+                                <ComboBoxItem Content="Budapesti út"/>
+                                <ComboBoxItem Content="Budapesti út (Dorozsmai út)"/>
+                                <ComboBoxItem Content="Centrum Áruház"/>
+                                <ComboBoxItem Content="Centrum Áruház (Mikszáth u.)"/>
+                                <ComboBoxItem Content="Cincér utca"/>
+                                <ComboBoxItem Content="Cinke u."/>
+                                <ComboBoxItem Content="Csaba u."/>
+                                <ComboBoxItem Content="Csallóközi u."/>
+                                <ComboBoxItem Content="Csanádi u."/>
+                                <ComboBoxItem Content="Csap u."/>
+                                <ComboBoxItem Content="Csatorna"/>
+                                <ComboBoxItem Content="Csemegi-tó"/>
+                                <ComboBoxItem Content="Cserepes sor"/>
+                                <ComboBoxItem Content="Cserje sor"/>
+                                <ComboBoxItem Content="Csillag tér"/>
+                                <ComboBoxItem Content="Csillag tér (Budapesti krt.)"/>
+                                <ComboBoxItem Content="Csillag tér (Lugas u.)"/>
+                                <ComboBoxItem Content="Csipkebogyó utca"/>
+                                <ComboBoxItem Content="Csonka u."/>
+                                <ComboBoxItem Content="Damjanich u."/>
+                                <ComboBoxItem Content="Dankó Pista utca"/>
+                                <ComboBoxItem Content="Deák Ferenc Gimnázium"/>
+                                <ComboBoxItem Content="Deli Károly u."/>
+                                <ComboBoxItem Content="Derkovits fasor"/>
+                                <ComboBoxItem Content="Diadal u."/>
+                                <ComboBoxItem Content="Diófa utca (Derkovits fasor)"/>
+                                <ComboBoxItem Content="Diófa utca (Szőregi út)"/>
+                                <ComboBoxItem Content="Diófa vendéglő"/>
+                                <ComboBoxItem Content="Dobó u."/>
+                                <ComboBoxItem Content="Dózsa utca"/>
+                                <ComboBoxItem Content="Dráva u."/>
+                                <ComboBoxItem Content="Dugonics tér"/>
+                                <ComboBoxItem Content="Dugonics tér (Dáni utca)"/>
+                                <ComboBoxItem Content="Dugonics tér (Tisza Lajos krt.)"/>
+                                <ComboBoxItem Content="Duna u."/>
+                                <ComboBoxItem Content="Első Szegedi Ipari Park"/>
+                                <ComboBoxItem Content="Erdélyi tér"/>
+                                <ComboBoxItem Content="Erdő u."/>
+                                <ComboBoxItem Content="Erdőtarcsa u."/>
+                                <ComboBoxItem Content="Etelka sor"/>
+                                <ComboBoxItem Content="Etelka sor (Felső Tisza-part)"/>
+                                <ComboBoxItem Content="Fecske u."/>
+                                <ComboBoxItem Content="Fehérparti lejáró"/>
+                                <ComboBoxItem Content="Fehértói halgazdaság"/>
+                                <ComboBoxItem Content="Fonógyári út"/>
+                                <ComboBoxItem Content="Fonógyári úti Iparváros"/>
+                                <ComboBoxItem Content="Földhivatal"/>
+                                <ComboBoxItem Content="Földvári u."/>
+                                <ComboBoxItem Content="Fő fasor"/>
+                                <ComboBoxItem Content="Füvészkert"/>
+                                <ComboBoxItem Content="Gábor Áron u."/>
+                                <ComboBoxItem Content="Gál utca"/>
+                                <ComboBoxItem Content="Gárdonyi Géza u."/>
+                                <ComboBoxItem Content="Gém u."/>
+                                <ComboBoxItem Content="Glattfelder Gyula tér"/>
+                                <ComboBoxItem Content="Gólya u."/>
+                                <ComboBoxItem Content="Gőzmalom u."/>
+                                <ComboBoxItem Content="Gumigyár"/>
+                                <ComboBoxItem Content="Gumigyár, buszforduló"/>
+                                <ComboBoxItem Content="Gyálarét"/>
+                                <ComboBoxItem Content="Gyár u. (Magyar u.)"/>
+                                <ComboBoxItem Content="Gyár u. (Szerb u.)"/>
+                                <ComboBoxItem Content="Gyümölcs u."/>
+                                <ComboBoxItem Content="Hajnal utca (ideiglenes)"/>
+                                <ComboBoxItem Content="Hajós u."/>
+                                <ComboBoxItem Content="Hargitai u."/>
+                                <ComboBoxItem Content="Hatházak"/>
+                                <ComboBoxItem Content="Háló utca"/>
+                                <ComboBoxItem Content="Hétvezér u."/>
+                                <ComboBoxItem Content="Holt-Tisza"/>
+                                <ComboBoxItem Content="Honfoglalás u."/>
+                                <ComboBoxItem Content="Honvéd tér"/>
+                                <ComboBoxItem Content="Honvéd tér (Tisza Lajos krt.)"/>
+                                <ComboBoxItem Content="Huszár u. (Okmányiroda)"/>
+                                <ComboBoxItem Content="Huszka Jenő utca"/>
+                                <ComboBoxItem Content="II. Kórház"/>
+                                <ComboBoxItem Content="Ikarusz köz"/>
+                                <ComboBoxItem Content="Ipoly sor"/>
+                                <ComboBoxItem Content="Iskola u."/>
+                                <ComboBoxItem Content="Jerney János Ált. Isk."/>
+                                <ComboBoxItem Content="József Attila sgt. (Budapesti krt.)"/>
+                                <ComboBoxItem Content="József Attila sgt. (Retek utca)"/>
+                                <ComboBoxItem Content="Ifjúsági Ház"/>
+                                <ComboBoxItem Content="Kalász u."/>
+                                <ComboBoxItem Content="Kamaratöltés"/>
+                                <ComboBoxItem Content="Kamarási u."/>
+                                <ComboBoxItem Content="Katalin utca"/>
+                                <ComboBoxItem Content="Kavics u."/>
+                                <ComboBoxItem Content="Kálvária sgt."/>
+                                <ComboBoxItem Content="Kálvária sgt. (Vásárhelyi Pál u.)"/>
+                                <ComboBoxItem Content="Kálvária tér"/>
+                                <ComboBoxItem Content="Kecskés telep, Bódi Vera u."/>
+                                <ComboBoxItem Content="Kecskés telep, Gera Sándor u."/>
+                                <ComboBoxItem Content="Kenyérgyári út"/>
+                                <ComboBoxItem Content="Kereskedelmi rakt."/>
+                                <ComboBoxItem Content="Kereskedő köz (EXPO)"/>
+                                <ComboBoxItem Content="Kiskertek"/>
+                                <ComboBoxItem Content="Kiskundorozsma, ABC"/>
+                                <ComboBoxItem Content="Kiskundorozsma, Czékus u."/>
+                                <ComboBoxItem Content="Kiskundorozsma, Fürdő"/>
+                                <ComboBoxItem Content="Kiskundorozsma, vá.bej."/>
+                                <ComboBoxItem Content="Kiskundorozsma, Vásártér"/>
+                                <ComboBoxItem Content="Kisstadion"/>
+                                <ComboBoxItem Content="Kisteleki u."/>
+                                <ComboBoxItem Content="Kísérleti gazdaság"/>
+                                <ComboBoxItem Content="Klára utca"/>
+                                <ComboBoxItem Content="Klinikák"/>
+                                <ComboBoxItem Content="Kokárda u."/>
+                                <ComboBoxItem Content="Kollégiumi út"/>
+                                <ComboBoxItem Content="Kolozsvári tér"/>
+                                <ComboBoxItem Content="Koppány köz"/>
+                                <ComboBoxItem Content="Kossuth Lajos Ált. Isk."/>
+                                <ComboBoxItem Content="Koszorú u."/>
+                                <ComboBoxItem Content="Körtöltés utca"/>
+                                <ComboBoxItem Content="Közép fasor"/>
+                                <ComboBoxItem Content="Közép fasor (Bérkert u.)"/>
+                                <ComboBoxItem Content="Lengyel u."/>
+                                <ComboBoxItem Content="Lidicei tér"/>
+                                <ComboBoxItem Content="Londoni krt. (Bakay Nándor u.)"/>
+                                <ComboBoxItem Content="Londoni krt. (Kálvária sgt.)"/>
+                                <ComboBoxItem Content="Lugas u."/>
+                                <ComboBoxItem Content="Makkosház"/>
+                                <ComboBoxItem Content="Makkosházi krt."/>
+                                <ComboBoxItem Content="Makkosházi krt. (Csongrádi sgt.)"/>
+                                <ComboBoxItem Content="Makkosházi krt. (Rókusi krt.)"/>
+                                <ComboBoxItem Content="Malom (Dorozsmai út)"/>
+                                <ComboBoxItem Content="Malom (Jerney u.)"/>
+                                <ComboBoxItem Content="Marostői utca"/>
+                                <ComboBoxItem Content="Mars tér (Attila utca)"/>
+                                <ComboBoxItem Content="Mars tér (aut. áll.)"/>
+                                <ComboBoxItem Content="Mars tér (Mikszáth u.)"/>
+                                <ComboBoxItem Content="Mars tér (Szt. Rókus tér)"/>
+                                <ComboBoxItem Content="Mars tér (üzletsor)"/>
+                                <ComboBoxItem Content="Moszkvai krt."/>
+                                <ComboBoxItem Content="Móravárosi Bevásárlóközpont"/>
+                                <ComboBoxItem Content="Mura utca"/>
+                                <ComboBoxItem Content="Nagyszombati u. (páratlan oldal)"/>
+                                <ComboBoxItem Content="Nagyszombati u. (páros oldal)"/>
+                                <ComboBoxItem Content="Napfény köz"/>
+                                <ComboBoxItem Content="Napfényfürdő"/>
+                                <ComboBoxItem Content="Napos út (Dorozsmai út)"/>
+                                <ComboBoxItem Content="Negyvennyolcas u."/>
+                                <ComboBoxItem Content="Nemes takács u. (ideiglenes)"/>
+                                <ComboBoxItem Content="Nyári tanya"/>
+                                <ComboBoxItem Content="Nyilassy utca"/>
+                                <ComboBoxItem Content="Ortutay utca"/>
+                                <ComboBoxItem Content="Öthalmi Diáklakások"/>
+                                <ComboBoxItem Content="Petőfi Sándor sgt."/>
+                                <ComboBoxItem Content="Petőfitelep, Fő tér"/>
+                                <ComboBoxItem Content="Pinty u."/>
+                                <ComboBoxItem Content="Pipiske utca"/>
+                                <ComboBoxItem Content="Radnóti u."/>
+                                <ComboBoxItem Content="Rákóczi u. (Vám tér)"/>
+                                <ComboBoxItem Content="Remény utca (ideiglenes)"/>
+                                <ComboBoxItem Content="Rendező tér"/>
+                                <ComboBoxItem Content="Rengey u."/>
+                                <ComboBoxItem Content="Repülőtér"/>
+                                <ComboBoxItem Content="Repülőtér bej.út"/>
+                                <ComboBoxItem Content="Retek utca"/>
+                                <ComboBoxItem Content="Rév u."/>
+                                <ComboBoxItem Content="Rókusi II. sz. Ált. Isk."/>
+                                <ComboBoxItem Content="Rókusi víztorony"/>
+                                <ComboBoxItem Content="Római krt. (Szilléri sgt.)"/>
+                                <ComboBoxItem Content="Rózsa u."/>
+                                <ComboBoxItem Content="Rózsa u. (Csongrádi sgt.)"/>
+                                <ComboBoxItem Content="Rózsatő u. (Magyar u.)"/>
+                                <ComboBoxItem Content="Rózsatő u. (Szerb u.)"/>
+                                <ComboBoxItem Content="Sajka utca"/>
+                                <ComboBoxItem Content="Sándor utca"/>
+                                <ComboBoxItem Content="Sárkány u."/>
+                                <ComboBoxItem Content="Sportcsarnok (Székely sor)"/>
+                                <ComboBoxItem Content="Sportcsarnok (Temesvári krt.)"/>
+                                <ComboBoxItem Content="Subasa"/>
+                                <ComboBoxItem Content="Szabadkai út"/>
+                                <ComboBoxItem Content="Szabadsajtó u."/>
+                                <ComboBoxItem Content="Szabadság tér"/>
+                                <ComboBoxItem Content="Szalámigyár"/>
+                                <ComboBoxItem Content="Szamos u."/>
+                                <ComboBoxItem Content="Szeged(Rókus), vá.bej.út"/>
+                                <ComboBoxItem Content="Szeged, Szélső sor"/>
+                                <ComboBoxItem Content="Szegedi Ipari Logisztikai Központ"/>
+                                <ComboBoxItem Content="Személy pu."/>
+                                <ComboBoxItem Content="Szent Ferenc u."/>
+                                <ComboBoxItem Content="Szent János tér"/>
+                                <ComboBoxItem Content="Szent-Györgyi Albert u."/>
+                                <ComboBoxItem Content="Szentmihály"/>
+                                <ComboBoxItem Content="Szentmihály, malom"/>
+                                <ComboBoxItem Content="Széchenyi István u."/>
+                                <ComboBoxItem Content="Széchenyi tér (Kelemen u.)"/>
+                                <ComboBoxItem Content="Széksósi út"/>
+                                <ComboBoxItem Content="Szél u."/>
+                                <ComboBoxItem Content="Szöri u."/>
+                                <ComboBoxItem Content="Szövetség u."/>
+                                <ComboBoxItem Content="Szőreg, ABC"/>
+                                <ComboBoxItem Content="Szőreg, malom"/>
+                                <ComboBoxItem Content="Szőregi Szabadidőpark"/>
+                                <ComboBoxItem Content="SZTK Rendelő"/>
+                                <ComboBoxItem Content="Szúnyog u."/>
+                                <ComboBoxItem Content="Tabán u. (Felső Tisza-part)"/>
+                                <ComboBoxItem Content="Tanács u."/>
+                                <ComboBoxItem Content="Tarján, víztorony"/>
+                                <ComboBoxItem Content="Tarján, Víztorony tér"/>
+                                <ComboBoxItem Content="Tassi ház"/>
+                                <ComboBoxItem Content="Tavasz utca"/>
+                                <ComboBoxItem Content="Tápé, Ált. Isk."/>
+                                <ComboBoxItem Content="Tápé, Csatár u."/>
+                                <ComboBoxItem Content="Temesvári krt. (Népkert sor)"/>
+                                <ComboBoxItem Content="Thököly u."/>
+                                <ComboBoxItem Content="Tisza Volán Zrt."/>
+                                <ComboBoxItem Content="Torontál tér (P+R)"/>
+                                <ComboBoxItem Content="Töltés u."/>
+                                <ComboBoxItem Content="Traktor u."/>
+                                <ComboBoxItem Content="Tücsök utca"/>
+                                <ComboBoxItem Content="Tündér utca"/>
+                                <ComboBoxItem Content="Tűzoltó utca"/>
+                                <ComboBoxItem Content="Új-Petőfitelep"/>
+                                <ComboBoxItem Content="Újszeged, Gabonakutató"/>
+                                <ComboBoxItem Content="Újszeged, Gyermekkorház"/>
+                                <ComboBoxItem Content="Újszeged, víztorony"/>
+                                <ComboBoxItem Content="Vadaspark"/>
+                                <ComboBoxItem Content="Vadkerti tér"/>
+                                <ComboBoxItem Content="Vadkerti tér, buszforduló"/>
+                                <ComboBoxItem Content="Vaspálya u."/>
+                                <ComboBoxItem Content="Városi Stadion"/>
+                                <ComboBoxItem Content="Vásárhelyi Pál út"/>
+                                <ComboBoxItem Content="Vásárhelyi Pál u. (Bakay Nándor u.)"/>
+                                <ComboBoxItem Content="Vásárhelyi Pál u. (Kossuth L. sgt.)"/>
+                                <ComboBoxItem Content="Vásárhelyi Pál u. (Pulz u.)"/>
+                                <ComboBoxItem Content="Verbéna u."/>
+                                <ComboBoxItem Content="Vértó"/>
+                                <ComboBoxItem Content="Vértói út"/>
+                                <ComboBoxItem Content="Zágráb u."/>
+                                <ComboBoxItem Content="Zápor út"/>
+                                <ComboBoxItem Content="Zsámbokréti sor"/>
+                            </ComboBox>
+                            <TextBlock Foreground="#FF333833"  Margin="10" FontSize="25" Text="Járatok:"></TextBlock>
+                            <ComboBox x:ConnectionId='36' Margin="10" x:Name="kedvencekjaratokcombobox"                                                             >
+                                <ComboBoxItem Content=""/>
+                                <ComboBoxItem Content="5"/>
+                                <ComboBoxItem Content="7"/>
+                                <ComboBoxItem Content="8"/>
+                                <ComboBoxItem Content="9"/>
+                                <ComboBoxItem Content="10"/>
+                                <ComboBoxItem Content="19"/>
+                                <ComboBoxItem Content="13"/>
+                                <ComboBoxItem Content="13A"/>
+                                <ComboBoxItem Content="20"/>
+                                <ComboBoxItem Content="20A"/>
+                                <ComboBoxItem Content="21"/>
+                                <ComboBoxItem Content="36"/>
+                                <ComboBoxItem Content="60"/>
+                                <ComboBoxItem Content="60Y"/>
+                                <ComboBoxItem Content="64"/>
+                                <ComboBoxItem Content="70"/>
+                                <ComboBoxItem Content="71"/>
+                                <ComboBoxItem Content="72"/>
+                                <ComboBoxItem Content="73"/>
+                                <ComboBoxItem Content="73Y"/>
+                                <ComboBoxItem Content="74"/>
+                                <ComboBoxItem Content="74A"/>
+                                <ComboBoxItem Content="75"/>
+                                <ComboBoxItem Content="76"/>
+                                <ComboBoxItem Content="77"/>
+                                <ComboBoxItem Content="77A"/>
+                                <ComboBoxItem Content="78"/>
+                                <ComboBoxItem Content="78A"/>
+                                <ComboBoxItem Content="79"/>
+                                <ComboBoxItem Content="79H"/>
+                                <ComboBoxItem Content="7F"/>
+                                <ComboBoxItem Content="84"/>
+                                <ComboBoxItem Content="84A"/>
+                                <ComboBoxItem Content="90"/>
+                                <ComboBoxItem Content="90F"/>
+                                <ComboBoxItem Content="90H"/>
+                                <ComboBoxItem Content="Auchan járat"/>
+                            </ComboBox>
+                            <Button x:ConnectionId='37' Background="#FFB26314" Foreground="Beige" Margin="10" x:Name="felvetelbutton"                      Content="Felvétel"></Button>
+                            <TextBlock x:ConnectionId='38' Foreground="#FF333833"   Margin="10" x:Name="badcontent" FontSize="15" Text=""></TextBlock>
+                        </StackPanel>
+                        <TextBlock Foreground="#FF333833"  Margin="10"  FontSize="20" Text="Mi szerint rendezzük: "></TextBlock>
+                        <ComboBox x:ConnectionId='30' Margin="10" x:Name="kedvencval"                                             >
+                            <ComboBoxItem Content="Járatok"/>
+                            <ComboBoxItem Content="Megállók"/>
+                        </ComboBox>
+                        <StackPanel x:ConnectionId='31' x:Name="ha_a_menetrend_szerint">
+                            <ListBox x:ConnectionId='34' Background="Transparent" ItemsSource="{Binding}" x:Name="menetrendkedvencekrendezve">
+                                <ListBox.ItemTemplate>
+                                    <DataTemplate>
+                                        <Grid>
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition></RowDefinition>
+                                                <RowDefinition></RowDefinition>
+                                            </Grid.RowDefinitions>
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition></ColumnDefinition>
+                                                <ColumnDefinition></ColumnDefinition>
+                                            </Grid.ColumnDefinitions>
+                                            <Rectangle></Rectangle>
+                                            <TextBlock FontWeight="Bold" Foreground="Blue" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="0" Grid.Row="0" Grid.RowSpan="2" Margin="1,0,0,0" FontSize="40" Text="{Binding Hanyasjarat}"></TextBlock>
+                                            <TextBlock Foreground="Blue" VerticalAlignment="Center" HorizontalAlignment="Left" Grid.Column="1" Grid.Row="0" FontSize="20" Margin="10,0" Text="{Binding Honnanindul}"></TextBlock>
+                                            <TextBlock Foreground="Blue" VerticalAlignment="Center" HorizontalAlignment="Left" Grid.Column="1" Grid.Row="1" FontSize="20" Margin="10,0" Text="{Binding Mikorindul}"></TextBlock>
+                                        </Grid>
+                                    </DataTemplate>
+                                </ListBox.ItemTemplate>
+                            </ListBox>
+                        </StackPanel>
+                        <StackPanel x:ConnectionId='32' x:Name="ha_a_jaratok_szerint">
+                            <ListBox x:ConnectionId='33' Background="Transparent" ItemsSource="{Binding}" x:Name="jaratokkedvencekrendezve">
+                                <ListBox.ItemTemplate>
+                                    <DataTemplate>
+                                        <Grid>
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition></RowDefinition>
+                                                <RowDefinition></RowDefinition>
+                                            </Grid.RowDefinitions>
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition></ColumnDefinition>
+                                                <ColumnDefinition></ColumnDefinition>
+                                            </Grid.ColumnDefinitions>
+                                            <TextBlock Foreground="#FF333833" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="0" Grid.Row="0" FontSize="30" Text="{Binding Megallo}"></TextBlock>
+                                            <TextBlock Foreground="#FF333833" HorizontalAlignment="Left" Grid.Column="1" Grid.Row="0" Grid.RowSpan="2" TextWrapping="WrapWholeWords" FontSize="20" Text="{Binding Jaratok_mikor}"></TextBlock>
+                                        </Grid>
+                                    </DataTemplate>
+                                </ListBox.ItemTemplate>
+                            </ListBox>
+                        </StackPanel>
+                    </StackPanel>
+                </ScrollViewer>
+                <ScrollViewer x:ConnectionId='11' x:Name="jaratokcrollvieer"  IsEnabled="False">
+                    <StackPanel x:ConnectionId='27' Visibility="Collapsed" x:Name="menetrendleiras">
+                        <TextBlock Foreground="#FF333833" HorizontalAlignment="Center" FontSize="40" Text="Járatok szerint:"></TextBlock>
+                        <ListBox x:ConnectionId='28' Background="Transparent" ItemsSource="{Binding}" x:Name="menetrendlist">
+                            <ListBox.ItemTemplate>
+                                <DataTemplate>
+                                    <Grid>
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="*"></RowDefinition>
+                                            <RowDefinition Height="*"></RowDefinition>
+                                        </Grid.RowDefinitions>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition></ColumnDefinition>
+                                            <ColumnDefinition></ColumnDefinition>
+                                        </Grid.ColumnDefinitions>
+                                        <TextBlock Foreground="#FF333833" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="0" Grid.Row="0" Grid.RowSpan="2" Margin="1,0,0,0" FontSize="33" FontWeight="Bold" Text="{Binding Hanyasjarat}"></TextBlock>
+                                        <TextBlock Foreground="#FF333833" VerticalAlignment="Center" HorizontalAlignment="Left" Grid.Column="1" Grid.Row="0" FontSize="20" Margin="10,0" Text="{Binding Honnanindul}"></TextBlock>
+                                        <TextBlock Foreground="#FF333833" VerticalAlignment="Center" HorizontalAlignment="Left" Grid.Column="1" Grid.Row="1" FontSize="20" Margin="10,0" Text="{Binding Mikorindul}"></TextBlock>
+                                    </Grid>
+                                </DataTemplate>
+                            </ListBox.ItemTemplate>
+                        </ListBox>
+                    </StackPanel>
+                </ScrollViewer>
+                <ScrollViewer x:ConnectionId='12' x:Name="megallokcrollvieer"  IsEnabled="False">
+                    <StackPanel x:ConnectionId='25' Visibility="Collapsed" x:Name="megallok_szerinti_listazas">
+                        <TextBlock Foreground="#FF333833" FontSize="40" HorizontalAlignment="Center" Text="Megállók szerint:"></TextBlock>
+                        <ListBox x:ConnectionId='26' Background="Transparent"  ItemsSource="{Binding}" x:Name="menetrend_szerint_list">
+                            <ListBox.ItemTemplate>
+                                <DataTemplate>
+                                    <Grid >
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="*"></RowDefinition>
+                                            <RowDefinition Height="*"></RowDefinition>
+                                        </Grid.RowDefinitions>
+                                        <TextBlock HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Row="0" Foreground="#FF333833" FontSize="25" Text="{Binding Megallo}" FontWeight="Bold"></TextBlock>
+                                        <TextBlock HorizontalAlignment="Left" Grid.Row="1" Foreground="#FF333833" TextWrapping="WrapWholeWords" FontSize="20" Text="{Binding Jaratok_mikor}"></TextBlock>
+                                    </Grid>
+                                </DataTemplate>
+                            </ListBox.ItemTemplate>
+                        </ListBox>
+                    </StackPanel>
+                </ScrollViewer>
+                <ScrollViewer x:ConnectionId='13' x:Name="elhagytamlistacrollvieer" IsEnabled="False">
+                    <StackPanel x:ConnectionId='16' Visibility="Collapsed" x:Name="elhagytamleiras">
+                        <TextBlock Foreground="#FF333833" FontSize="40" Text="Elhagytam" HorizontalAlignment="Center"></TextBlock>
+                        <Grid HorizontalAlignment="Left">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*"></RowDefinition>
+                                <RowDefinition Height="*"></RowDefinition>
+                                <RowDefinition Height="*"></RowDefinition>
+                                <RowDefinition Height="*"></RowDefinition>
+                                <RowDefinition Height="*"></RowDefinition>
+                                <RowDefinition Height="*"></RowDefinition>
+                                <RowDefinition Height="*"></RowDefinition>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"></ColumnDefinition>
+                                <ColumnDefinition Width="*"></ColumnDefinition>
+                            </Grid.ColumnDefinitions>
+                            <TextBlock HorizontalAlignment="Right" VerticalAlignment="Center" Grid.Column="0" Grid.Row="0" Foreground="#FF333833" FontSize="20" Text="Hol: " Margin="0,10"></TextBlock>
+                            <TextBox x:ConnectionId='17' HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Column="1" Grid.Row="0" x:Name="hol" Height="10" Width="200" Margin="0,10"></TextBox>
+
+                            <TextBlock HorizontalAlignment="Right" VerticalAlignment="Center" Grid.Column="0" Grid.Row="1" Foreground="#FF333833" FontSize="20" Text="Mit: " Margin="0,10"></TextBlock>
+                            <TextBox x:ConnectionId='18' HorizontalAlignment="Left" VerticalAlignment="Center"  Grid.Column="1" Grid.Row="1" x:Name="mit" Height="10" Width="200" Margin="0,10"></TextBox>
+
+                            <TextBlock HorizontalAlignment="Right" VerticalAlignment="Center" Grid.Column="0" Grid.Row="2" Foreground="#FF333833" FontSize="20" Text="Név: " Margin="0,10"></TextBlock>
+                            <TextBox x:ConnectionId='19' HorizontalAlignment="Left" VerticalAlignment="Center"  Grid.Column="1" Grid.Row="2" x:Name="ki" Height="10" Width="200" Margin="0,10"></TextBox>
+
+                            <TextBlock HorizontalAlignment="Right" VerticalAlignment="Center" Grid.Column="0" Grid.Row="3" Foreground="#FF333833" FontSize="20" Text="Elérhetőség: " Margin="0,10"></TextBlock>
+                            <TextBox x:ConnectionId='20' HorizontalAlignment="Left" VerticalAlignment="Center"  Grid.Column="1" Grid.Row="3" x:Name="id" Height="10" Width="200" Margin="0,10"></TextBox>
+
+                            <Button x:ConnectionId='21' VerticalAlignment="Center" Grid.Column="1" Grid.Row="4" HorizontalAlignment="Center" x:Name="elveszettbutton" Foreground="Beige" Background="#FFB26314" Width="100" Height="50" Content="Küldés"                               Margin="0,10"></Button>
+                            <TextBlock x:ConnectionId='22' HorizontalAlignment="Stretch" VerticalAlignment="Center" Grid.Column="1" Grid.Row="5" x:Name="figyelmeztetes" Text="" Foreground="#FF333833" FontSize="20" Margin="0,10"></TextBlock>
+
+                            <TextBlock HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Column="0" Grid.Row="6" Text="Eddig hol,mit,kik: " Foreground="#FF333833" FontSize="20" Margin="0,10"></TextBlock>
+                            <Button x:ConnectionId='23' HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Column="1" Grid.Row="6" x:Name="frissitobutton" Foreground="Beige" Background="#FFB26314" Width="100" Height="50" Content="Frissítés"                              Margin="0,10"></Button>
+                            
+                            <ListBox x:ConnectionId='24' Background="Transparent" ItemsSource="{Binding}" x:Name="elhagytam_list">
+                                <ListBox.ItemTemplate>
+                                    <DataTemplate>
+                                        <StackPanel>
+                                            <TextBlock FontSize="20" Foreground="#FF333833" Margin="5,0,0,0" Text="{Binding hol}"></TextBlock>
+                                            <TextBlock FontSize="20" Foreground="#FF333833" Margin="5,0,0,0" Text="{Binding mit}"></TextBlock>
+                                            <TextBlock FontSize="20" Foreground="#FF333833" Margin="5,0,0,0" Text="{Binding ki}"></TextBlock>
+                                            <TextBlock FontSize="20" Foreground="#FF333833" Margin="5,0,0,0" Text="{Binding id}"></TextBlock>
+                                        </StackPanel>
+                                    </DataTemplate>
+                                </ListBox.ItemTemplate>
+                            </ListBox>
+                        </Grid>
+                    </StackPanel>
+                </ScrollViewer>
+                <StackPanel x:ConnectionId='14' Visibility="Collapsed" x:Name="leirasleiras">
+                    <TextBlock Foreground="#FF333833" FontSize="40" Text="Leírás" HorizontalAlignment="Center"></TextBlock>
+                    <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="#FF333833" FontSize="20" Text="Villamosok még nincsenek fent,"></TextBlock> 
+                    <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="#FF333833" FontSize="20" Text=" valamint 2 buszjárat se. "></TextBlock>
+                    <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="#FF333833" FontSize="20" Text=" Hamarosan elérhetőek lesznek. "></TextBlock>
+                </StackPanel>
+                <StackPanel x:ConnectionId='15' Visibility="Collapsed" x:Name="elerhetosegleiras">
+                    <TextBlock Foreground="#FF333833" FontSize="40" Text="Elérhetőség" HorizontalAlignment="Center"></TextBlock>
+                    <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="#FF333833" FontSize="20" Text="Lénárt Bence"></TextBlock>
+                    <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="#FF333833" FontSize="20" Text="bence960206@gmail.com"></TextBlock>
+                </StackPanel>
+            </Grid>
+        </SplitView>
+    </Grid>
+</Page>
+

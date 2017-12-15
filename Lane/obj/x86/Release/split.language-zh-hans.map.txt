@@ -1,0 +1,6 @@
+﻿[ResourceMetadata]
+"ResourceId"			"split.language-zh-hans"
+"ResourceDimensions"		"language-zh-cn"
+
+[Files]
+"C:\Users\Doniald\Desktop\Lane\Lane\obj\x86\Release\split.language-zh-hans.pri"			"resources.pri"

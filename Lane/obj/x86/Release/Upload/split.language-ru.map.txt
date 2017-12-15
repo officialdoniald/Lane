@@ -1,0 +1,6 @@
+﻿[ResourceMetadata]
+"ResourceId"			"split.language-ru"
+"ResourceDimensions"		"language-ru-ru"
+
+[Files]
+"C:\Users\Doniald\Desktop\Lane\Lane\obj\x86\Release\Upload\split.language-ru.pri"			"resources.pri"

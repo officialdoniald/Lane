@@ -1,0 +1,6 @@
+﻿[ResourceMetadata]
+"ResourceId"			"split.language-en"
+"ResourceDimensions"		"language-en-us"
+
+[Files]
+"C:\Users\Doniald\Desktop\ManualReference\Lane\Lane\obj\ARM\Release\split.language-en.pri"			"resources.pri"

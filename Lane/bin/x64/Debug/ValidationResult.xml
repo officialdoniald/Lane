@@ -1,0 +1,1616 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type='text/xsl' href='C:\ProgramData\Windows App Certification Kit\results.xsl'?>
+<REPORT xml:lang="hu-HU" OVERALL_RESULT="PASS" VERSION="10.0" LATEST_VERSION="TRUE" UPDATE_DOWNLOAD_URL="" TOOLSET_ARCHITECTURE="x64" SecureBoot="FALSE" APP_TYPE="UapApp" PUBLISHER_DISPLAY_NAME="CN=88245A3B-EB70-4DFA-A7EF-A40E8CF32C52" APP_NAME="" APP_VERSION="" OSVERSION="10.0.10240.0" OS="Microsoft Windows 10 Education" PER_USER_APPLICATION="" PARTIAL_RUN="FALSE" LCID="1038" VALIDATION_TYPE="UI" ReportGenerationTime="2015. 11. 23. 15:50:03" ID="0bdc3943a502d56059c1447142a85506">
+  <REQUIREMENTS>
+    <REQUIREMENT NUMBER="1" TITLE="Clean reversible install test" RATIONALE="A clean, reversible, installation allows users to successfully manage (deploy, and remove) applications on their system." />
+    <REQUIREMENT NUMBER="2" TITLE="Install to the correct folders test" RATIONALE="Windows provides specific locations in the file system to store programs and software components, shared application data, and application data specific to a user." />
+    <REQUIREMENT NUMBER="3" TITLE="Digitally signed file test" RATIONALE="An Authenticode digital signature allows users to be sure that the software is genuine. It also allows detection if a file has been tampered with e.g. infected by a virus." />
+    <REQUIREMENT NUMBER="4" TITLE="Support x64 Windows test" RATIONALE="To maintain compatibility with 64-bit versions of Windows, it is necessary that applications should natively support 64-bit or at minimum 32-bit Windows based applications to run seamlessly on 64-bit." />
+    <REQUIREMENT NUMBER="5" TITLE="OS version checking test" RATIONALE="Applications must not perform version checks for equality (== 5.1). If you need a specific feature, check whether the feature is available. If you need Windows XP, check for Windows XP or later (&gt;= 5.1), This way, your detection code will continue to work on future versions of Windows. Driver installers and uninstall modules should never check the OS version." />
+    <REQUIREMENT NUMBER="6" TITLE="User account control (UAC) test" RATIONALE="Most applications do not require administrator privileges at run time, and should be just fine running as a standard-user. Windows applications must have a manifest (embedded or external) to define its execution level that tells OS the privileges needed to run the application." />
+    <REQUIREMENT NUMBER="7" TITLE="Adhere to system restart manager messages" RATIONALE="In a critical shutdown, applications that return FALSE to WM_QUERYENDSESSION will be sent WM_ENDSESSION and closed, while those that time out in response to WM_QUERYENDSESSION will be terminated." />
+    <REQUIREMENT NUMBER="8" TITLE="Safe mode test" RATIONALE="By default, most drivers and services that did not come preinstalled with Windows are not started in Safe Mode. They should remain disabled unless they are needed for basic operations of the system or for diagnostic and recovery purposes." />
+    <REQUIREMENT NUMBER="9" TITLE="Multiuser session test" RATIONALE="Windows users should be able to run concurrent sessions without conflict or disruption.  Applications must ensure that when running in multiple sessions either locally or remotely, the normal functionality of the application should not be impacted. Application settings and data files should not be persisted across users. A user’s privacy and preferences should be isolated to the user’s session." />
+    <REQUIREMENT NUMBER="10" TITLE="Deployment and launch tests" RATIONALE="Application failures such as crashes and hangs are a major disruption to users and cause frustration. Eliminating such failures improves application stability and reliability, and overall, provides users with a better application experience.">
+      <TEST INDEX="50" NAME="Bytecode generation" DESCRIPTION="Byte code generation should be able to complete successfully for packages containing an HTML5 Windows Store app." EXECUTIONTIME="00h:00m:01s.04ms">
+        <RESULT><![CDATA[PASS]]></RESULT>
+        <MESSAGES />
+      </TEST>
+      <TEST INDEX="79" NAME="Background tasks cancelation handler" DESCRIPTION="App should implement event handler to handle background task cancelation request." EXECUTIONTIME="00h:00m:46s.63ms">
+        <RESULT><![CDATA[PASS]]></RESULT>
+        <MESSAGES />
+      </TEST>
+      <TEST INDEX="81" NAME="Platform version launch" DESCRIPTION="App should not mis-use OSVersionInfo API to provide users functionality that is specific to the OS." EXECUTIONTIME="00h:00m:22s.52ms">
+        <RESULT><![CDATA[PASS]]></RESULT>
+        <MESSAGES />
+      </TEST>
+      <TEST INDEX="47" NAME="App launch" DESCRIPTION="App launch tests." EXECUTIONTIME="00h:00m:22s.62ms">
+        <RESULT><![CDATA[PASS]]></RESULT>
+        <MESSAGES />
+      </TEST>
+      <TEST INDEX="21" NAME="Crashes and hangs" DESCRIPTION="Do not crash or hang during the testing process." EXECUTIONTIME="00h:00m:03s.31ms">
+        <RESULT><![CDATA[PASS]]></RESULT>
+        <MESSAGES />
+      </TEST>
+    </REQUIREMENT>
+    <REQUIREMENT NUMBER="11" TITLE="Compatibility and resiliency test" RATIONALE="When Windows detects that an application has operated in an incompatible manner, it applies a compatibility fix that causes the application to behave correctly, ensuring a positive user experience. Applications should not rely on this behavior since it is only provided to allow legacy applications to work correctly on Windows." />
+    <REQUIREMENT NUMBER="12" TITLE="Package compliance test" RATIONALE="The package manifest was missing one or more required attributes.">
+      <TEST INDEX="77" NAME="Application count" DESCRIPTION="One package should not define more than one app in the manifest." EXECUTIONTIME="00h:00m:01s.07ms">
+        <RESULT><![CDATA[PASS]]></RESULT>
+        <MESSAGES />
+      </TEST>
+      <TEST INDEX="31" NAME="App manifest" DESCRIPTION="App manifest must include valid entries for all required fields." EXECUTIONTIME="00h:00m:01s.21ms">
+        <RESULT><![CDATA[PASS]]></RESULT>
+        <MESSAGES />
+      </TEST>
+      <TEST INDEX="74" NAME="Bundle manifest" DESCRIPTION="Bundle manifest must include valid entries for all required fields." EXECUTIONTIME="00h:00m:02s.07ms">
+        <RESULT><![CDATA[PASS]]></RESULT>
+        <MESSAGES />
+      </TEST>
+      <TEST INDEX="75" NAME="Package size" DESCRIPTION="Package file size should not be greater than 4 gigabytes." EXECUTIONTIME="00h:00m:01s.36ms">
+        <RESULT><![CDATA[PASS]]></RESULT>
+        <MESSAGES />
+      </TEST>
+      <TEST INDEX="83" NAME="Restricted namespace" DESCRIPTION="Check if any restricted namespace is referenced in the appx manifest." EXECUTIONTIME="00h:00m:01s.14ms">
+        <RESULT><![CDATA[PASS]]></RESULT>
+        <MESSAGES />
+      </TEST>
+    </REQUIREMENT>
+    <REQUIREMENT NUMBER="13" TITLE="Windows security best practices test" RATIONALE="An application should not change the default Windows security settings." />
+    <REQUIREMENT NUMBER="14" TITLE="Windows security features test" RATIONALE="Applications must opt-into Windows security features.">
+      <TEST INDEX="33" NAME="Binary analyzer" DESCRIPTION="Analysis of security features enabled on binaries" EXECUTIONTIME="00h:00m:02s.42ms">
+        <RESULT><![CDATA[PASS]]></RESULT>
+        <MESSAGES />
+      </TEST>
+      <TEST INDEX="70" NAME="Banned file analyzer" DESCRIPTION="Analysis of application to detect known insecure files" EXECUTIONTIME="00h:00m:01s.17ms">
+        <RESULT><![CDATA[PASS]]></RESULT>
+        <MESSAGES />
+      </TEST>
+      <TEST INDEX="62" NAME="Private code signing" DESCRIPTION="App should not package private code signing key files." EXECUTIONTIME="00h:00m:01s.15ms">
+        <RESULT><![CDATA[PASS]]></RESULT>
+        <MESSAGES />
+      </TEST>
+    </REQUIREMENT>
+    <REQUIREMENT NUMBER="15" TITLE="Supported API test" RATIONALE="The application should only refer to the APIs allowed by the Windows SDK for Windows Store Apps.">
+      <TEST INDEX="38" NAME="Supported APIs" DESCRIPTION="Windows Store App must only use supported platform APIs." EXECUTIONTIME="00h:00m:05s.22ms">
+        <RESULT><![CDATA[PASS]]></RESULT>
+        <MESSAGES />
+      </TEST>
+    </REQUIREMENT>
+    <REQUIREMENT NUMBER="17" TITLE="Performance test" RATIONALE="The application should have a fast and responsive launch and suspend experience while consuming a reasonable amount of system resources (CPU, File IO, Memory etc.) to enable fast switching and multitasking between previously unopened applications." />
+    <REQUIREMENT NUMBER="19" TITLE="App manifest resources tests" RATIONALE="The App Package Manifest should have valid resources defined in the resources.pri file, as per the App Packaging Specification and App Manifest Schema.">
+      <TEST INDEX="45" NAME="App resources" DESCRIPTION="The package should have valid resources defined in the resources.pri file." EXECUTIONTIME="00h:00m:00s.81ms">
+        <RESULT><![CDATA[PASS]]></RESULT>
+        <MESSAGES />
+      </TEST>
+      <TEST INDEX="61" NAME="Branding" DESCRIPTION="App should not use the default images packed by windows SDK samples or Visual Studio." EXECUTIONTIME="00h:00m:02s.30ms">
+        <RESULT><![CDATA[PASS]]></RESULT>
+        <MESSAGES />
+      </TEST>
+    </REQUIREMENT>
+    <REQUIREMENT NUMBER="20" TITLE="Debug configuration test" RATIONALE="The App should not install any debug binaries.">
+      <TEST INDEX="46" NAME="Debug configuration" DESCRIPTION="The App should not install any debug binaries." EXECUTIONTIME="00h:00m:01s.15ms">
+        <RESULT><![CDATA[PASS]]></RESULT>
+        <MESSAGES />
+      </TEST>
+    </REQUIREMENT>
+    <REQUIREMENT NUMBER="21" TITLE="File encoding test" RATIONALE="Packages containing an HTML5 Windows Store app must have correct file encoding.">
+      <TEST INDEX="49" NAME="UTF-8 file encoding" DESCRIPTION="Packages containing an HTML5 Windows Store app must have correct file encoding." EXECUTIONTIME="00h:00m:01s.24ms">
+        <RESULT><![CDATA[PASS]]></RESULT>
+        <MESSAGES />
+      </TEST>
+    </REQUIREMENT>
+    <REQUIREMENT NUMBER="22" TITLE="Direct3D Feature Test" RATIONALE="App should use the Direct3D capability correctly.">
+      <TEST INDEX="51" NAME="Direct3D feature level support" DESCRIPTION="Applications must render content on Direct3D feature level 9.1 hardware." EXECUTIONTIME="00h:00m:22s.29ms">
+        <RESULT><![CDATA[PASS]]></RESULT>
+        <MESSAGES />
+      </TEST>
+      <TEST INDEX="71" NAME="Direct3D trim after suspend" DESCRIPTION="Applications must call IDXGIDevice3::Trim() on the Direct3D devices they create when handling a Suspend notification." EXECUTIONTIME="00h:00m:38s.43ms">
+        <RESULT><![CDATA[PASS]]></RESULT>
+        <MESSAGES />
+      </TEST>
+    </REQUIREMENT>
+    <REQUIREMENT NUMBER="23" TITLE="App Capabilities test" RATIONALE="Packages declaring special-use capabilities will have to provide justifications during the onboarding process.">
+      <TEST INDEX="52" NAME="Special use capabilities" DESCRIPTION="Packages declaring special-use capabilities will have to provide justifications during the onboarding process." EXECUTIONTIME="00h:00m:01s.07ms">
+        <RESULT><![CDATA[PASS]]></RESULT>
+        <MESSAGES />
+      </TEST>
+    </REQUIREMENT>
+    <REQUIREMENT NUMBER="24" TITLE="Windows Runtime metadata validation" RATIONALE="Metadata needs to be conformant and consistent across all generation sources.">
+      <TEST INDEX="56" NAME="ExclusiveTo attribute" DESCRIPTION="A class must not implement an interface that is marked ExclusiveTo another class." EXECUTIONTIME="00h:00m:10s.94ms">
+        <RESULT><![CDATA[PASS]]></RESULT>
+        <MESSAGES />
+      </TEST>
+      <TEST INDEX="57" NAME="Type location" DESCRIPTION="Types must be defined in the metadata file with the longest matching namespace." EXECUTIONTIME="00h:00m:01s.14ms">
+        <RESULT><![CDATA[PASS]]></RESULT>
+        <MESSAGES />
+      </TEST>
+      <TEST INDEX="55" NAME="Type name case-sensitivity" DESCRIPTION="Namespace and type names must not vary only by casing." EXECUTIONTIME="00h:00m:00s.84ms">
+        <RESULT><![CDATA[PASS]]></RESULT>
+        <MESSAGES />
+      </TEST>
+      <TEST INDEX="54" NAME="Type name correctness" DESCRIPTION="Only system types can be in the Windows namespace and no types can be in the global namespace." EXECUTIONTIME="00h:00m:00s.82ms">
+        <RESULT><![CDATA[PASS]]></RESULT>
+        <MESSAGES />
+      </TEST>
+      <TEST INDEX="58" NAME="General metadata correctness" DESCRIPTION="Metadata files must meet various requirements in order to be valid and correct." EXECUTIONTIME="00h:00m:09s.53ms">
+        <RESULT><![CDATA[PASS]]></RESULT>
+        <MESSAGES />
+      </TEST>
+      <TEST INDEX="53" NAME="Properties" DESCRIPTION="Write-only and indexer properties may not be used. Corresponding getter and setter methods must match in type." EXECUTIONTIME="00h:00m:00s.78ms">
+        <RESULT><![CDATA[PASS]]></RESULT>
+        <MESSAGES />
+      </TEST>
+    </REQUIREMENT>
+    <REQUIREMENT NUMBER="25" TITLE="Package sanity test" RATIONALE="Validation of the app package contents to ensure correctness.">
+      <TEST INDEX="63" NAME="Platform appropriate files" DESCRIPTION="App should not install files that do not match the target processor architecture." EXECUTIONTIME="00h:00m:01s.21ms">
+        <RESULT><![CDATA[PASS]]></RESULT>
+        <MESSAGES />
+      </TEST>
+      <TEST INDEX="66" NAME="Supported directory structure check" DESCRIPTION="Validate each file in the package for that the file name length should be less than MAX_PATH." EXECUTIONTIME="00h:00m:01s.15ms">
+        <RESULT><![CDATA[PASS]]></RESULT>
+        <MESSAGES />
+      </TEST>
+    </REQUIREMENT>
+    <REQUIREMENT NUMBER="26" TITLE="High-DPI support" RATIONALE="The application needs to set DPI-aware to make the UI look consistently good across a wide variety of high-DPI display settings." />
+    <REQUIREMENT NUMBER="27" TITLE="Resource Usage Test" RATIONALE="WinJS background tasks need to call close() to free resource.">
+      <TEST INDEX="68" NAME="WinJS background task" DESCRIPTION="WinJS background tasks need to call close() to free resource." EXECUTIONTIME="00h:00m:02s.12ms">
+        <RESULT><![CDATA[PASS]]></RESULT>
+        <MESSAGES />
+      </TEST>
+    </REQUIREMENT>
+  </REQUIREMENTS>
+  <APPLICATIONS>
+    <Installed_Programs>
+      <Program Name="58147Doniald.Lane" Type="Application" Source="AppxPackage" Publisher="CN=88245A3B-EB70-4DFA-A7EF-A40E8CF32C52" Version="1.1.4.0" Language="1033" InstallDate="11/23/2015 14:46:19" RootDirPath="C:\Program Files\WindowsApps\58147Doniald.Lane_1.1.4.0_x64__qdqf1m5byb8sc" Id="00000695908ccf3f9621c7091bebbf7ff50900000904">
+        <Indicators>
+          <WindowsStoreAppManifestIndicators>
+            <PackageManifest PackageFullName="58147Doniald.Lane_1.1.4.0_x64__qdqf1m5byb8sc">
+              <Package>
+                <Identity Name="58147Doniald.Lane" Publisher="CN=88245A3B-EB70-4DFA-A7EF-A40E8CF32C52" Version="1.1.4.0" ProcessorArchitecture="x64" />
+                <PhoneIdentity PhoneProductId="fee96163-0aff-437f-8eac-eedc33f52371" PhonePublisherId="00000000-0000-0000-0000-000000000000" />
+                <Properties>
+                  <DisplayName>Lane</DisplayName>
+                  <PublisherDisplayName>Doniald</PublisherDisplayName>
+                  <Logo>Assets\StoreLogo.png</Logo>
+                </Properties>
+                <Dependencies>
+                  <TargetDeviceFamily Name="Windows.Universal" MinVersion="10.0.10240.0" MaxVersionTested="10.0.10240.0" />
+                  <PackageDependency Name="Microsoft.VCLibs.140.00" MinVersion="14.0.22929.0" Publisher="CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US" />
+                  <PackageDependency Name="Microsoft.NET.Native.Runtime.1.1" MinVersion="1.1.23231.0" Publisher="CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US" />
+                </Dependencies>
+                <Resources>
+                  <Resource Language="HU-HU" />
+                  <Resource Language="EN-US" />
+                  <Resource Scale="200" />
+                </Resources>
+                <Applications>
+                  <Application Id="App" Executable="Lane.exe" EntryPoint="Lane.App">
+                    <VisualElements Description="Lane szegedi menetrend, ki tudod listázni buszonként, megállóként, hozzá is tudsz adni a kedvencekhez akármennyi járatot, illetve megállót." DisplayName="Lane" Square150x150Logo="Assets\Square150x150Logo.png" Square44x44Logo="Assets\Square44x44Logo.png" BackgroundColor="transparent" ForegroundText="light">
+                      <DefaultTile Wide310x150Logo="Assets\Wide310x150Logo.png" />
+                      <SplashScreen Image="Assets\SplashScreen.png" />
+                    </VisualElements>
+                  </Application>
+                </Applications>
+                <Capabilities>
+                  <Capability Name="internetClient" />
+                </Capabilities>
+              </Package>
+            </PackageManifest>
+            <BundleManifest PackageFamilyName="58147Doniald.Lane_qdqf1m5byb8sc">
+              <Bundle SchemaVersion="2.0">
+                <Identity Name="58147Doniald.Lane" Publisher="CN=88245A3B-EB70-4DFA-A7EF-A40E8CF32C52" Version="1.1.4.0" />
+                <Packages>
+                  <Package Type="application" Version="1.1.4.0" Architecture="x64" FileName="Lane_1.1.4.0_x64.appx" Offset="5751263" Size="6084010">
+                    <Resources>
+                      <Resource Language="HU-HU" />
+                      <Resource Language="EN-US" />
+                      <Resource Scale="200" />
+                    </Resources>
+                  </Package>
+                  <Package Type="application" Version="1.1.4.0" Architecture="arm" FileName="Lane_1.1.4.0_ARM.appx" Offset="51" Size="5741815">
+                    <Resources>
+                      <Resource Language="HU-HU" />
+                      <Resource Language="EN-US" />
+                      <Resource Scale="200" />
+                    </Resources>
+                  </Package>
+                  <Package Type="resource" Version="1.1.4.0" ResourceId="split.language-en" FileName="Lane_1.1.4.0_language-en.appx" Offset="5741949" Size="9239">
+                    <Resources>
+                      <Resource Language="en-us" />
+                    </Resources>
+                  </Package>
+                </Packages>
+              </Bundle>
+            </BundleManifest>
+          </WindowsStoreAppManifestIndicators>
+        </Indicators>
+        <StaticProperties>
+          <Files Id="00002282ac07830442ad88e52f7c918a9a73b74fdb21">
+            <File Name="sqlite3.dll" Id="00005363b5280836ae39ef9dfd70068549e6577a2595" ProductName="SQLite" CompanyName="SQLite Development Team" ProductVersion="3.9.2" VerLanguage="1033" SwitchBackContext="0x0100000000000602" FileVersion="3.9.2" Size="0x173e00" SizeOfImage="0x17a000" PeHeaderHash="0101acd0f085139348cacb9845593c7ca7b9e3944e2e" PeChecksum="0x0" BinProductVersion="3.9.2.0" BinFileVersion="3.9.2.0" FileDescription="SQLite is a software library that implements a self-contained, serverless, zero-configuration, transactional SQL database engine." InternalName="sqlite3" LegalCopyright="http://www.sqlite.org/copyright.html" LinkDate="11/02/2015 19:13:52" BinaryType="PE64_AMD64" LowerCaseLongPath="c:\program files\windowsapps\58147doniald.lane_1.1.4.0_x64__qdqf1m5byb8sc\sqlite3.dll" LongPathHash="0000ab867b828d16868f007f64a238d0bab34e93422b" />
+            <File Name="resources.pri" Id="0000df00e66c77b4841c46257304b40f1621c3101797" Size="0x92a8" BinaryType="DATA_ONLY" LowerCaseLongPath="c:\program files\windowsapps\58147doniald.lane_1.1.4.0_x64__qdqf1m5byb8sc\resources.pri" LongPathHash="00000bae38c3255b6f4dde8c467567dd6845d0ebe08d" />
+            <File Name="ClrCompression.dll" Id="00003e0ead7458e4ad4ec0ca220a18be2728eae6ea20" ProductName="Microsoft® .NET Framework" CompanyName="Microsoft Corporation" ProductVersion="1.0.23123.00 built by: PROJECTKREL" VerLanguage="1033" SwitchBackContext="0x0100000000000602" FileVersion="1.0.23123.00 built by: PROJECTKREL" Size="0xff58" SizeOfImage="0x11000" PeHeaderHash="010180133b75799bcf35dee08546b18ddf87cb3a3b7d" PeChecksum="0x15e25" BinProductVersion="1.0.23123.0" BinFileVersion="1.0.23123.0" FileDescription="ClrCompression" InternalName="ClrCompression" LegalCopyright="© Microsoft Corporation.  All rights reserved." LinkDate="07/23/2015 04:01:33" BinaryType="PE64_AMD64" OriginalFileName="ClrCompression" LowerCaseLongPath="c:\program files\windowsapps\58147doniald.lane_1.1.4.0_x64__qdqf1m5byb8sc\clrcompression.dll" LongPathHash="00006f91e5320e6cbe74e901cf42f933bf87067630b4" />
+            <File Name="S-1-5-21-4124814132-2877643176-3399028702-1001-MergedResources-0.pri" Id="0000c78bbca6108d099f057bc3b2a7da9efd37bf85c2" Size="0x27c8" BinaryType="DATA_ONLY" LowerCaseLongPath="c:\program files\windowsapps\58147doniald.lane_1.1.4.0_x64__qdqf1m5byb8sc\microsoft.system.package.metadata\s-1-5-21-4124814132-2877643176-3399028702-1001-mergedresources-0.pri" LongPathHash="0000ca099bb7259edd72ca8c52ecb2d57e993b8f4881" />
+            <File Name="Lane.exe" Id="0000d1fc9fedd347df6db923dd16c0f264e536ce4702" ProductName="Lane" ProductVersion="1.0.0.0" VerLanguage="0" SwitchBackContext="0x0100000000000602" FileVersion="1.0.0.0" Size="0x3e00" SizeOfImage="0x8000" PeHeaderHash="0101a803f549773663e6db59ccf31ef7170a999b19e2" PeChecksum="0x0" BinProductVersion="1.0.0.0" BinFileVersion="1.0.0.0" FileDescription="Lane" InternalName="Lane.exe" LegalCopyright="Copyright ©  2015" LinkDate="11/23/2015 14:38:39" BinaryType="PE64_AMD64" OriginalFileName="Lane.exe" LowerCaseLongPath="c:\program files\windowsapps\58147doniald.lane_1.1.4.0_x64__qdqf1m5byb8sc\lane.exe" LongPathHash="00006a7f38c8efb6e4685732fb6705e6b32e7791f722" />
+            <File Name="Lane.dll" Id="000062c09122383be56be2d8847dc4dd2313b2554f05" ProductName="Lane" ProductVersion="1.0.0.0" VerLanguage="0" SwitchBackContext="0x0100000000000602" FileVersion="1.0.0.0" Size="0xbb0400" SizeOfImage="0xbc1000" PeHeaderHash="0101c9a48658cc119abe37fa25842c7f867b5b2f63d4" PeChecksum="0x0" BinProductVersion="1.0.0.0" BinFileVersion="1.0.0.0" FileDescription="Lane" InternalName="Lane.exe" LegalCopyright="Copyright ©  2015" LinkDate="11/23/2015 14:38:39" BinaryType="PE64_AMD64" OriginalFileName="Lane.exe" LowerCaseLongPath="c:\program files\windowsapps\58147doniald.lane_1.1.4.0_x64__qdqf1m5byb8sc\lane.dll" LongPathHash="000071126b718c7c705f52647a6eb0221d3f1bcb0a3d" />
+          </Files>
+        </StaticProperties>
+      </Program>
+    </Installed_Programs>
+  </APPLICATIONS>
+  <DEPENDENCY_INFORMATION>
+    <AitStaticAnalysis ProgramId="00000695908ccf3f9621c7091bebbf7ff50900000904" AnalysisVersion="1.60" DictionaryVersion="2.16" Type="Package" Id="58147Doniald.Lane_1.1.4.0_x64__qdqf1m5byb8sc">
+      <AitFile ErrorCode="0" Name="ClrCompression.dll" Id="00003e0ead7458e4ad4ec0ca220a18be2728eae6ea20">
+        <AitCategory Id="ApiStatic">
+          <AitFeature Name="api-ms-win-core-profile-l1-1-0.dll!QueryPerformanceCounter" />
+          <AitFeature Name="api-ms-win-core-com-l1-1-0.dll!CoTaskMemAlloc" />
+          <AitFeature Name="api-ms-win-core-com-l1-1-0.dll!CoTaskMemFree" />
+          <AitFeature Name="api-ms-win-core-sysinfo-l1-1-0.dll!GetSystemTimeAsFileTime" />
+          <AitFeature Name="api-ms-win-core-sysinfo-l1-1-0.dll!GetTickCount64" />
+          <AitFeature Name="api-ms-win-core-libraryloader-l1-1-0.dll!DisableThreadLibraryCalls" />
+          <AitFeature Name="api-ms-win-core-processthreads-l1-1-0.dll!GetCurrentThreadId" />
+        </AitCategory>
+      </AitFile>
+      <AitFile ErrorCode="0" Name="sqlite3.dll" Id="00005363b5280836ae39ef9dfd70068549e6577a2595">
+        <AitCategory Id="Com">
+          <AitFeature Name="{00732830-50f1-4d03-99ac-c6644c8ed8b5}" />
+          <AitFeature Name="{010a6306-c433-44e5-a9f2-bd84d4030a95}" />
+          <AitFeature Name="{011b2e30-8b39-4308-bea1-e8aa61e47826}" />
+          <AitFeature Name="{032e1f8c-a9c1-4e71-8011-0dee9d4811a3}" />
+          <AitFeature Name="{033508a2-781a-437a-b078-3f32badcfe47}" />
+          <AitFeature Name="{041c1fe9-2409-45e1-a538-4c53eeee04a7}" />
+          <AitFeature Name="{05294bad-bc38-48bf-85d7-770e0e2ae0ba}" />
+          <AitFeature Name="{055c93ea-253d-467c-b6ca-a97da1e9a18d}" />
+          <AitFeature Name="{06f37fbe-b5f2-448b-b13e-e328ac1c516a}" />
+          <AitFeature Name="{08b66aba-fe33-46cd-a50c-a8ffb3260537}" />
+          <AitFeature Name="{08f327ff-85d5-48b9-aee9-28511e339f9f}" />
+          <AitFeature Name="{0aacf7a4-5e1d-49df-8034-fb6a68bc5ed1}" />
+          <AitFeature Name="{0c44717b-19f7-48d6-b046-cf22826eaa74}" />
+          <AitFeature Name="{0e09fd91-42f8-4055-90a0-896f96738936}" />
+          <AitFeature Name="{0f2f3758-8ec7-4381-922b-8f6c07d288f3}" />
+          <AitFeature Name="{0ffb97c1-9778-4a09-8e5b-cb5e482d0555}" />
+          <AitFeature Name="{11fcbfc8-f93a-471b-b121-f379e349313c}" />
+          <AitFeature Name="{125e7431-f678-4e8e-b670-20a9b06c512d}" />
+          <AitFeature Name="{13043da7-7fca-4c2b-9eca-6890f9f00185}" />
+          <AitFeature Name="{13bf0796-9842-495b-b0e7-ef8f79c0701d}" />
+          <AitFeature Name="{143ba4fc-e9c5-4736-91b2-e8eb9cb88356}" />
+          <AitFeature Name="{1551b7d4-a981-4067-8a62-0524e4ade121}" />
+          <AitFeature Name="{163c792f-bd75-413c-bf23-b1fe7b95d825}" />
+          <AitFeature Name="{1673fcce-dabd-4d50-beee-180b8a8191b6}" />
+          <AitFeature Name="{179d65e7-4658-4cb6-aa13-41d094ea255e}" />
+          <AitFeature Name="{188f20d6-9873-464a-ace5-57e010f465e6}" />
+          <AitFeature Name="{193cfbe7-65c7-4540-ad08-6283ba76879a}" />
+          <AitFeature Name="{1ada0e3e-e4a2-4123-b451-dc96bf800419}" />
+          <AitFeature Name="{1adb665e-37c7-4790-9980-dd7ae74e8bb2}" />
+          <AitFeature Name="{1b25da6e-8aa6-41e9-8251-4165f5985f49}" />
+          <AitFeature Name="{1c905384-083c-4bd3-b559-179cddeb33ec}" />
+          <AitFeature Name="{1e5e46ee-0f45-4838-a8e9-d0479d446c30}" />
+          <AitFeature Name="{1edd7103-0e5e-4d6c-b5e8-9318983d6a03}" />
+          <AitFeature Name="{2040f715-67f8-4322-9b80-4fa9fefb83e8}" />
+          <AitFeature Name="{20dd55f9-13f1-46c8-9285-2c05fa3eda6f}" />
+          <AitFeature Name="{2246bab8-d0f8-41c1-a82a-4137db6504fb}" />
+          <AitFeature Name="{22f3b823-0b7c-424e-9df7-33d4f962931b}" />
+          <AitFeature Name="{231c9088-e469-4df1-b208-6e490d71cb90}" />
+          <AitFeature Name="{238c0503-f995-4587-8777-a2b7d80acfef}" />
+          <AitFeature Name="{26155fa2-5ba5-4ea4-a3b4-2dc7d63c8e26}" />
+          <AitFeature Name="{272b1ef3-c633-4da5-a26c-c6d0f56b29da}" />
+          <AitFeature Name="{275eb6d4-6a2e-4278-a914-e460d5f088f6}" />
+          <AitFeature Name="{277151c3-9e3e-42f6-91a4-5dfdeb232451}" />
+          <AitFeature Name="{27862ed0-404e-47df-a1e2-e37308be7b37}" />
+          <AitFeature Name="{28823e10-4786-42f1-9730-792b3566b150}" />
+          <AitFeature Name="{2bf755c5-e799-41b4-bb40-242f40959b71}" />
+          <AitFeature Name="{2c3893cc-f81a-4e7a-b857-76a80887e185}" />
+          <AitFeature Name="{2d161777-a66f-4ea5-bb87-793ffa4941f2}" />
+          <AitFeature Name="{2dd7ed0d-98ed-4041-9632-50ff812b773f}" />
+          <AitFeature Name="{2e0e1b12-d627-4fca-bad4-1faf168c7d14}" />
+          <AitFeature Name="{30d5a829-7fa4-4026-83bb-d75bae4ea99e}" />
+          <AitFeature Name="{323a8a4b-fbea-4446-abbc-3da7915fdd3a}" />
+          <AitFeature Name="{3364c405-933c-4e7d-a034-500fb8dcd9f3}" />
+          <AitFeature Name="{338c67c2-8b84-4c2b-9c50-7b8767847a1f}" />
+          <AitFeature Name="{33ee3134-1dd6-4e3a-8067-d1c162e8642b}" />
+          <AitFeature Name="{33f59b01-5325-43ab-9ab3-bdae440e4121}" />
+          <AitFeature Name="{36dbba28-9e2e-49c6-8ef7-3ab7a5dcc8b8}" />
+          <AitFeature Name="{3a30fa01-5c40-499d-b33f-a43050f74fc4}" />
+          <AitFeature Name="{3a3dfc9c-aede-4dc7-9e6c-41c044bd3592}" />
+          <AitFeature Name="{3a3f9b56-6798-4bbc-833e-0f34b17c65ff}" />
+          <AitFeature Name="{3c064fe9-2351-4248-a529-7110f464a785}" />
+          <AitFeature Name="{3c4d3046-ac4b-49f2-97d6-020e6182cb9c}" />
+          <AitFeature Name="{3f8f38b7-308c-47e1-924d-8645348e5db7}" />
+          <AitFeature Name="{40c82536-c1fe-4d93-a792-1e736bc70837}" />
+          <AitFeature Name="{40ecba95-2450-4c1d-b6b4-ed45463dee9c}" />
+          <AitFeature Name="{4207a996-ca2f-42f7-bde8-8b10457a7f30}" />
+          <AitFeature Name="{4208a6db-684a-49c6-9e59-90121ee050d6}" />
+          <AitFeature Name="{42a254f4-9d76-42e8-861b-47c25dd0cf71}" />
+          <AitFeature Name="{42bd3355-7f88-478b-8e81-690b20340678}" />
+          <AitFeature Name="{433ba1a4-e1e2-48fd-b7fc-b5d6eee65033}" />
+          <AitFeature Name="{4341ae3b-fc12-4e53-8c02-ac714c415a27}" />
+          <AitFeature Name="{43929d18-5ec9-4b5a-919c-4205b0c804b6}" />
+          <AitFeature Name="{44a9796f-723e-4fdf-a218-033e75b0c084}" />
+          <AitFeature Name="{44fa4a24-2d09-42e1-8b5e-368208796a4c}" />
+          <AitFeature Name="{4580dca8-5750-4916-aa52-c0829521eb94}" />
+          <AitFeature Name="{460c92e5-4c32-4538-a4d4-b6b4400d140f}" />
+          <AitFeature Name="{467dab65-2712-4f52-b783-9ea8111c63cd}" />
+          <AitFeature Name="{46a1205b-69c9-4745-b72f-a8a4fc8f24ae}" />
+          <AitFeature Name="{4734fc3d-ab21-4424-b735-f4353a56c8fc}" />
+          <AitFeature Name="{47396c1e-51b9-4207-9146-248e636a1d1d}" />
+          <AitFeature Name="{484a9045-6d70-49db-8e68-46ffbd17d38d}" />
+          <AitFeature Name="{4aee9d91-bf15-4da9-95f6-f6b7d558225b}" />
+          <AitFeature Name="{4bd682dd-7554-40e9-9a9b-82654ede7e62}" />
+          <AitFeature Name="{4bdaf9c8-cdb2-4acb-bfc3-6648563378ec}" />
+          <AitFeature Name="{4cbf40bd-af7a-4a36-9476-b1dce141709a}" />
+          <AitFeature Name="{4ce9fb84-beee-4e39-a773-fc5f0eae328d}" />
+          <AitFeature Name="{4d1e6461-84f7-499d-bd91-2a36e2b7aaa2}" />
+          <AitFeature Name="{4d239005-3c2a-41b1-9022-536bb9cf93b1}" />
+          <AitFeature Name="{4d5fe14f-b87c-4028-bc9c-59e9947fb056}" />
+          <AitFeature Name="{4e4e26a7-44e5-4039-9099-6000ead1f0c6}" />
+          <AitFeature Name="{4e534bdf-2960-4878-97a4-9624deb72f2d}" />
+          <AitFeature Name="{4e5db9dd-7141-46c4-8be3-e9dc9e27275c}" />
+          <AitFeature Name="{4e9bc6dc-880d-47fc-a0a1-72b639e62559}" />
+          <AitFeature Name="{4edb8ee2-96dd-49a7-94f7-4607ddab8e3c}" />
+          <AitFeature Name="{4ff93a75-4145-47ff-ac7f-dff1c1fa5b0f}" />
+          <AitFeature Name="{514449ec-7ea2-4de7-a6a6-7dfbaaebb6fb}" />
+          <AitFeature Name="{518dc408-c077-475b-809e-0bc0c57e4b74}" />
+          <AitFeature Name="{523c9424-fcff-4275-afee-ecdb9ab47973}" />
+          <AitFeature Name="{524cedcf-6e29-4ce5-9573-6b753db66c3a}" />
+          <AitFeature Name="{52f96fa3-8742-4411-ae69-79a85f29ac8b}" />
+          <AitFeature Name="{52fda447-2baa-412c-b29f-d4b1778efa1e}" />
+          <AitFeature Name="{53f926d2-083c-4283-b45b-81c007237e44}" />
+          <AitFeature Name="{5612147b-e843-45e3-94d8-06169e3c8e17}" />
+          <AitFeature Name="{575933df-34fe-4480-af15-07691f3d5d9b}" />
+          <AitFeature Name="{580d5292-2ab1-49aa-a7f0-33bd3f8df9f1}" />
+          <AitFeature Name="{59140509-8bc9-4eb4-b636-dabdc4f46f66}" />
+          <AitFeature Name="{5984c710-daf2-43c8-8bb4-a4d3eacfd03f}" />
+          <AitFeature Name="{5a200ec7-0426-47dc-b86c-6f475915e451}" />
+          <AitFeature Name="{5a2a7520-4802-452d-9ad9-4351ada7ec35}" />
+          <AitFeature Name="{5a648006-843a-4da9-865b-9d26e5dfad7b}" />
+          <AitFeature Name="{5b8c6b3d-24ae-41b5-a1bf-f0c3d544845b}" />
+          <AitFeature Name="{5b9d1026-15c4-44dd-b89a-47a59b7d7c4f}" />
+          <AitFeature Name="{5d115e66-27e8-492f-b8e5-2f90896cd4cd}" />
+          <AitFeature Name="{5ff5e930-2544-4a17-bd78-1f2fdebb106b}" />
+          <AitFeature Name="{603e4308-f0be-4adc-acc9-8b27ab9cf556}" />
+          <AitFeature Name="{6054509b-8ebe-4feb-9c1e-75e69de54b84}" />
+          <AitFeature Name="{6095f4dd-b7c0-46ab-81fe-d90f36d00d24}" />
+          <AitFeature Name="{60db2fa8-b705-4fde-a7d6-ebbb1891d39e}" />
+          <AitFeature Name="{61079db8-e3e7-4b4f-858d-5c63a96ef684}" />
+          <AitFeature Name="{615e2902-9718-467b-83fb-b293a19121de}" />
+          <AitFeature Name="{61ebf5c7-efea-4346-9554-981d7e198ffe}" />
+          <AitFeature Name="{629bdbc8-d932-4ff4-96b9-8d96c5c1e858}" />
+          <AitFeature Name="{638bb2db-451d-4661-b099-414f34ffb9f1}" />
+          <AitFeature Name="{640ada70-06f3-4c87-a678-9829c9127c28}" />
+          <AitFeature Name="{64b89265-d341-4922-b38a-dd4af8808c4e}" />
+          <AitFeature Name="{6654c911-7d66-46fa-aecf-e4a4baa93ab8}" />
+          <AitFeature Name="{679ab78b-b336-4822-ac40-0d750f0b7a2b}" />
+          <AitFeature Name="{68870edb-165b-4214-b4f3-584eca8c8a69}" />
+          <AitFeature Name="{68eb7adf-917f-48eb-9aeb-7de53e086ab1}" />
+          <AitFeature Name="{693dd42f-dbe7-49b5-b3b3-2893ac5d3423}" />
+          <AitFeature Name="{6a1cab51-1fb2-4909-80b8-35731a2b3e7f}" />
+          <AitFeature Name="{6d117b4c-ce50-4b43-9e69-b18258ea5315}" />
+          <AitFeature Name="{6dc4b89f-0386-4263-87c1-ed7dce30890e}" />
+          <AitFeature Name="{6e449e28-7b25-4999-9b0b-875400a1e8c8}" />
+          <AitFeature Name="{6f354338-3302-4d13-ad8d-adcc0ff9e47c}" />
+          <AitFeature Name="{70e3b0f8-4bfc-428a-8889-cc51da9a7b9d}" />
+          <AitFeature Name="{719ae507-68de-4db8-97de-49998c059f2f}" />
+          <AitFeature Name="{71af914d-c10f-484b-bc50-14bc623b3a27}" />
+          <AitFeature Name="{72827082-5525-4bf2-bc09-1f5095d4964d}" />
+          <AitFeature Name="{72d1cb78-b3ef-4f75-a80b-6fd9dae2944b}" />
+          <AitFeature Name="{751f3ab8-0b8e-451c-9f15-966e699bac25}" />
+          <AitFeature Name="{758d9661-221c-480f-a339-50656673f46f}" />
+          <AitFeature Name="{79b9d5f2-879e-4b89-b798-79e47598030c}" />
+          <AitFeature Name="{7af7f71e-1a67-4a31-ae80-e907708a619b}" />
+          <AitFeature Name="{7b0a9342-3905-438d-aaef-78ae265f8dd2}" />
+          <AitFeature Name="{7b840471-5900-4d85-a90b-10cb85fe3552}" />
+          <AitFeature Name="{7e59f224-b332-4f12-8b9f-a8c2f06b32cd}" />
+          <AitFeature Name="{7eab19bc-1821-4923-b4a9-0aea404d0070}" />
+          <AitFeature Name="{7ed681a1-a880-40c9-b4ed-0bee1e15f549}" />
+          <AitFeature Name="{80371d4f-2fd8-4c24-aa86-3163a87b4e5a}" />
+          <AitFeature Name="{8190a363-6f27-46e9-aeb6-c0ae83e47dc7}" />
+          <AitFeature Name="{81b10b1c-e561-4093-9b4d-2ad482794a53}" />
+          <AitFeature Name="{81c19cf1-74e6-4387-82eb-bb8fd64b4346}" />
+          <AitFeature Name="{81f21ac0-f661-4708-ba4f-d386bd0d622e}" />
+          <AitFeature Name="{828e1e36-e9e3-4cfc-9b66-48b78ea9bb2c}" />
+          <AitFeature Name="{82fb460e-0940-4b6d-b8d0-642b30989e15}" />
+          <AitFeature Name="{8504dbea-fb6a-4144-a6c2-33499c9284f5}" />
+          <AitFeature Name="{85361600-1c63-4627-bcb1-3a89e0bc9c55}" />
+          <AitFeature Name="{857309dc-3fbf-4e7d-986f-ef3b1a07a964}" />
+          <AitFeature Name="{85e2913f-0e4a-4a3e-8994-406ae7ed646e}" />
+          <AitFeature Name="{861bf39b-6368-4dee-b40e-74684a5ce714}" />
+          <AitFeature Name="{86664478-8029-46fe-a789-1c2f3e2ffb5c}" />
+          <AitFeature Name="{86b4d4d1-b2fe-4e34-a81d-66640300454f}" />
+          <AitFeature Name="{8873b5ab-c5fb-46d8-93fe-da3ff1934054}" />
+          <AitFeature Name="{887411eb-7f54-4732-a5f0-5e43e3b8c2f5}" />
+          <AitFeature Name="{88edf458-f2c8-49f4-be1f-c256b388bc11}" />
+          <AitFeature Name="{8a43ed9f-f4e6-4421-acf9-1dab2986820c}" />
+          <AitFeature Name="{8a9b29f1-7ca7-49de-9bd3-3c5b7184f616}" />
+          <AitFeature Name="{8c488375-b37e-4c60-9ba8-b760fda3e59d}" />
+          <AitFeature Name="{8c7a7648-6057-4339-bc70-f210010a4150}" />
+          <AitFeature Name="{8cb36951-58c8-43e3-94bc-41d33f8b630e}" />
+          <AitFeature Name="{8e86a951-04b9-4bd2-929d-fef3f71621d0}" />
+          <AitFeature Name="{8ffc224a-e782-495d-b614-654c4f0b2370}" />
+          <AitFeature Name="{905a0fe0-bc53-11df-8c49-001e4fc686da}" />
+          <AitFeature Name="{905a0fe1-bc53-11df-8c49-001e4fc686da}" />
+          <AitFeature Name="{905a0fe2-bc53-11df-8c49-001e4fc686da}" />
+          <AitFeature Name="{905a0fe6-bc53-11df-8c49-001e4fc686da}" />
+          <AitFeature Name="{90a219a9-e3d3-4d63-993b-05b9a5393abf}" />
+          <AitFeature Name="{916a4cb7-8aa7-4c78-b374-5dedb752e60b}" />
+          <AitFeature Name="{917a71c1-85f3-4dd1-b001-a50bfd21c8d2}" />
+          <AitFeature Name="{920d9cb1-a5fc-4a21-8c09-49dfe6ffe25f}" />
+          <AitFeature Name="{930cef4b-b829-40fc-88f4-8513e8a64738}" />
+          <AitFeature Name="{93c9bafc-ebcb-467e-82c6-276feae36b5a}" />
+          <AitFeature Name="{9459b726-53b5-4686-9eaf-fa8162dc3980}" />
+          <AitFeature Name="{9572adf1-8f1d-481f-a15b-c61655f16a0e}" />
+          <AitFeature Name="{95f4af3a-ef47-424a-9741-fd2815eba2bd}" />
+          <AitFeature Name="{96061c05-2dba-4d08-b0bd-2b30a131c6aa}" />
+          <AitFeature Name="{961ff258-21bf-4b42-a298-fa479d4c52e2}" />
+          <AitFeature Name="{96369f54-8eb6-48f0-abce-c1b211e627c3}" />
+          <AitFeature Name="{9656c1e7-3e56-43cc-8a39-33c73d9d542b}" />
+          <AitFeature Name="{96893acf-111d-442c-8a77-b87992f8e2d6}" />
+          <AitFeature Name="{9739d39a-42ce-4872-8d70-3063aa584b70}" />
+          <AitFeature Name="{975f2f1e-e656-4c5e-a0a1-717c6ffa7d64}" />
+          <AitFeature Name="{97909e87-9291-4f91-b6c8-b6e359d7a7fb}" />
+          <AitFeature Name="{97d098a5-3b99-4de9-88a5-e11d2f50c795}" />
+          <AitFeature Name="{98bb6a24-dc1c-43cb-b4ed-d1c0eb2391f3}" />
+          <AitFeature Name="{9b8c9326-4ca6-4ce5-8994-9eff65cabdcc}" />
+          <AitFeature Name="{9baeaba6-0e0b-49aa-babc-12b1dc774986}" />
+          <AitFeature Name="{9da4ca41-20e1-4e9b-9f65-a9f435340c3a}" />
+          <AitFeature Name="{9e365e57-48b2-4160-956f-c7385120bbfc}" />
+          <AitFeature Name="{9e6f41e6-baf2-4a97-b600-9333f5df80fd}" />
+          <AitFeature Name="{9ec00f82-ab6e-4b36-89e3-b23bc0a1dacc}" />
+          <AitFeature Name="{9f130176-dc1b-4055-ad66-652f39d990e8}" />
+          <AitFeature Name="{9f488807-4580-4be8-be68-92a9311713bb}" />
+          <AitFeature Name="{9fc90920-7bcf-4888-a81e-102d7034d7ce}" />
+          <AitFeature Name="{9ffdf7f5-b8c9-4ef0-b7d2-1de626561fc8}" />
+          <AitFeature Name="{a05791e6-cc9f-4687-acab-a364fd785463}" />
+          <AitFeature Name="{a0d009f7-8748-4ee2-ad44-afa6be997c51}" />
+          <AitFeature Name="{a21a8189-26b0-4676-ae94-54041bc125e8}" />
+          <AitFeature Name="{a2861367-cee5-4e4d-9ed7-41c34ec18b02}" />
+          <AitFeature Name="{a42b0c24-7f21-4abc-99c1-8f01007f0880}" />
+          <AitFeature Name="{a42b3316-8415-40dc-8c44-98361d235430}" />
+          <AitFeature Name="{a4ed5c81-76c9-40bd-8be6-b1d90fb20ae7}" />
+          <AitFeature Name="{a506638d-2a1a-413e-bc75-9f38381cc069}" />
+          <AitFeature Name="{a5caee9b-8708-49d1-8d36-67d25a8da00c}" />
+          <AitFeature Name="{a5dd6357-bf2a-4c4f-a31f-29e71c6f8b35}" />
+          <AitFeature Name="{a6612fb6-7688-4ace-95fb-359538e7aa01}" />
+          <AitFeature Name="{a9da01aa-e00e-4cfe-aa44-2dd932dca3d8}" />
+          <AitFeature Name="{ae4a9045-6d70-49db-8e68-46ffbd17d38d}" />
+          <AitFeature Name="{af338ae5-cf64-423c-85e5-f3e72448fb23}" />
+          <AitFeature Name="{afcbbe9b-582b-4133-9648-e44ca46ee491}" />
+          <AitFeature Name="{b163dbc1-1b51-4c89-a591-0fd40b3c57c9}" />
+          <AitFeature Name="{b176486a-d293-492c-a058-db575b3e3c0f}" />
+          <AitFeature Name="{b1767f8d-f698-4982-b05f-3a6e8cab01a2}" />
+          <AitFeature Name="{b1d8a289-3acf-4124-9fa3-ea8aba353c21}" />
+          <AitFeature Name="{b32bf870-eee7-4ad2-aaf1-a87effcf00a4}" />
+          <AitFeature Name="{b34ab22b-d19b-46ff-9f38-dec7754bb9e7}" />
+          <AitFeature Name="{b35011cf-5cef-4d24-aa0c-340c5208725d}" />
+          <AitFeature Name="{b35a3c67-f1e7-4655-ad6e-4857588f552f}" />
+          <AitFeature Name="{b47988d5-67af-4bc3-8d39-5b89022026a1}" />
+          <AitFeature Name="{b47a37bf-3d6b-4f88-83e8-6dcb4012ffb0}" />
+          <AitFeature Name="{b60af902-1546-434d-869c-6e3520760ef3}" />
+          <AitFeature Name="{b65f913d-e2f0-4ffd-ba95-34241647e45c}" />
+          <AitFeature Name="{b71598a9-c065-456d-a845-1eccec5dc28b}" />
+          <AitFeature Name="{b8f0b925-b350-48b3-a198-5c1a84700243}" />
+          <AitFeature Name="{b94cec01-0c1a-4c57-be55-75d01289735d}" />
+          <AitFeature Name="{b9914881-a1ee-4bc4-92a5-466968e30436}" />
+          <AitFeature Name="{b9c76b9b-1056-4e69-8330-162619956f9b}" />
+          <AitFeature Name="{ba0b6794-91a3-4bb2-b1b9-69a5dff0ba09}" />
+          <AitFeature Name="{bafa21d8-b071-4cd8-853e-341203e557d3}" />
+          <AitFeature Name="{bafaecad-484d-41be-ba80-1d58c65263ea}" />
+          <AitFeature Name="{bb2afc33-93b1-42ed-8b26-236dd9c78496}" />
+          <AitFeature Name="{bb74f27b-a544-4301-80e6-0ae033ef4536}" />
+          <AitFeature Name="{bbf1bb18-e47a-48eb-8807-f8f8d3ea4551}" />
+          <AitFeature Name="{bc6a8519-18ee-4043-9839-4fc584d60a14}" />
+          <AitFeature Name="{bc8aab62-66ec-419a-bc5d-ca65a4cb46da}" />
+          <AitFeature Name="{bca5e023-7dd9-4b6b-9a92-55d43cb38f73}" />
+          <AitFeature Name="{bf9918ea-d801-4564-a495-b1e84f8ad085}" />
+          <AitFeature Name="{c09f33da-08ab-4931-9b7c-451025f21f81}" />
+          <AitFeature Name="{c0f46eb4-c174-481a-bc25-921986f6a6f3}" />
+          <AitFeature Name="{c1d432ba-c824-4452-a7fd-512bc3bbe9a1}" />
+          <AitFeature Name="{c297d70d-7353-47ab-ba58-8c61425dc54b}" />
+          <AitFeature Name="{c2cf2373-2d26-43d9-b69d-dcb86d03f6da}" />
+          <AitFeature Name="{c2df14c7-30eb-41c6-b3bc-5b1694f9dab3}" />
+          <AitFeature Name="{c3da6fb7-b744-4b45-b0b8-223a0938d0dc}" />
+          <AitFeature Name="{c446fb5d-4793-4896-a8e2-be57a8bb0f50}" />
+          <AitFeature Name="{c54361b2-54cd-432b-bdbc-4b19c4b470d7}" />
+          <AitFeature Name="{c584659f-99b2-4bcc-bd33-04e63f42902e}" />
+          <AitFeature Name="{c596fd8d-73c9-4a14-b021-ec1c50a3b727}" />
+          <AitFeature Name="{c5aefd1e-f467-40ba-8566-ab640a441e1d}" />
+          <AitFeature Name="{c627e291-34e2-4963-8eed-93cbb0ea3d70}" />
+          <AitFeature Name="{c79d8a4b-c163-4ee7-803f-67ce79f9972d}" />
+          <AitFeature Name="{c8316cc0-aed2-41e0-bce0-c26ca74f85ec}" />
+          <AitFeature Name="{c89b8a2f-ac56-4460-8d2f-80023bec4fc5}" />
+          <AitFeature Name="{ca4d975c-d4d6-43f0-97c0-0833c6391c24}" />
+          <AitFeature Name="{ca6fb8ac-2987-4ee3-9c54-d8afbcb86c1d}" />
+          <AitFeature Name="{cac6c3b8-3c64-4dfd-ad9f-479e4d4065a4}" />
+          <AitFeature Name="{cb354ce5-abb8-4f9f-b3ce-8181aa61ad82}" />
+          <AitFeature Name="{cb43ccc9-446b-4a4f-be97-757771be5203}" />
+          <AitFeature Name="{cb8ba807-6ac5-43c9-8ac5-9ba232163182}" />
+          <AitFeature Name="{cc254827-4b3d-438f-9232-10c76bc7e038}" />
+          <AitFeature Name="{cce33b37-0d85-41fa-b43d-da599c3eb009}" />
+          <AitFeature Name="{ccf1a05f-d4b5-483a-b06e-e0db1ec420e4}" />
+          <AitFeature Name="{cd1c93eb-4c4c-443a-a8d3-f5c241e91689}" />
+          <AitFeature Name="{cd50b9a9-ce10-44d2-8234-c355a073ef33}" />
+          <AitFeature Name="{cd770614-65c4-426c-9494-34fc43554862}" />
+          <AitFeature Name="{ce57aae7-6449-45a7-971f-d113be7a8936}" />
+          <AitFeature Name="{cf651713-cd08-4fd8-b697-a281b6544e2e}" />
+          <AitFeature Name="{cf86461d-261e-4b72-9acd-44ed2ace6a29}" />
+          <AitFeature Name="{cfa126e4-253a-4c3c-953b-395c37aed309}" />
+          <AitFeature Name="{cfb2a855-1c59-4b13-b1e5-16e29805f7c4}" />
+          <AitFeature Name="{cff52e04-cca6-4614-a17e-754910c84a99}" />
+          <AitFeature Name="{d05d55db-785e-4a66-be02-9beec58aea81}" />
+          <AitFeature Name="{d06eb1c7-3805-4ecb-b757-6cf15e26fef3}" />
+          <AitFeature Name="{d1f276c4-98d8-4636-bf49-eb79507548e9}" />
+          <AitFeature Name="{d222d519-4361-451e-96c4-60f4f9742db0}" />
+          <AitFeature Name="{d243e016-d907-4fcc-bb8d-f77baa5028f1}" />
+          <AitFeature Name="{d2d4ba6d-987c-4cc0-b6bd-d49a11b38f9a}" />
+          <AitFeature Name="{d45a0451-f225-4542-9296-0e1df5d254df}" />
+          <AitFeature Name="{d627a1c4-c025-4c41-9def-f1eafad075e7}" />
+          <AitFeature Name="{d7527847-57da-4e15-914c-06806699a098}" />
+          <AitFeature Name="{d87b3e83-15a6-487b-b959-0c361e60e954}" />
+          <AitFeature Name="{d8b89aa1-d1c6-416e-bd8d-5790914dc563}" />
+          <AitFeature Name="{dad5ecd6-306f-4d6a-b496-46ba8eb106ce}" />
+          <AitFeature Name="{daf77a4f-c27a-4298-9ac6-2922c45e7da6}" />
+          <AitFeature Name="{dd002f2f-2bdd-4076-90a3-22c275312965}" />
+          <AitFeature Name="{dd37a898-26bf-467a-9ce5-ccf3fb11371e}" />
+          <AitFeature Name="{dda45a10-f9d4-40c4-8af5-c5b6b5a61d1d}" />
+          <AitFeature Name="{ddec873e-cfce-4932-8c1d-3c3d011a34c0}" />
+          <AitFeature Name="{de598db2-0e03-43b0-bf56-bcc40b3162df}" />
+          <AitFeature Name="{dec4c6c4-93e8-4f7c-be27-cefaa1af68a7}" />
+          <AitFeature Name="{e00e4c8a-4828-4da1-8bb8-8672df8515e7}" />
+          <AitFeature Name="{e06c2879-0d61-4938-91d0-96a45bee8479}" />
+          <AitFeature Name="{e0b7ac81-bfc3-4344-a5da-19fd5a27baae}" />
+          <AitFeature Name="{e22e7749-dd70-446f-aefc-61cee59f655e}" />
+          <AitFeature Name="{e2b50029-b4c1-4314-a4b8-fb813a2f275e}" />
+          <AitFeature Name="{e2cc1366-cf66-43c4-a96a-a5a112db4746}" />
+          <AitFeature Name="{e3c22451-3aa4-4885-9240-311f5f8fbe9d}" />
+          <AitFeature Name="{e6977274-fc35-455c-8bfb-6d7f4653ca97}" />
+          <AitFeature Name="{e705eed4-d478-47d6-ba46-1a8ebe114a20}" />
+          <AitFeature Name="{e70d9fc1-ff79-4aa4-8c9b-0c93aedfde8a}" />
+          <AitFeature Name="{e7392ce0-c78d-427e-8b2c-01ff420c69d5}" />
+          <AitFeature Name="{e7af329d-051d-4fab-b1a9-47fd77f70a41}" />
+          <AitFeature Name="{e7ecd720-f2f4-4a2d-920e-170a2f482a27}" />
+          <AitFeature Name="{e827e8b9-08d9-4a8e-a0ac-fe5ed3cbbbd3}" />
+          <AitFeature Name="{e8948079-9d58-47b8-b2b2-41b07f4795f9}" />
+          <AitFeature Name="{e89d854d-2050-40bb-b344-f6f355eeb314}" />
+          <AitFeature Name="{e9374738-6f88-41d9-8720-78e08e398349}" />
+          <AitFeature Name="{e959d568-f729-44a4-871d-bd0628696a33}" />
+          <AitFeature Name="{e995317d-7296-42d9-8233-c5be73b74a4a}" />
+          <AitFeature Name="{ead0ca44-9ded-4037-8149-5e4cc2564468}" />
+          <AitFeature Name="{eb505d4a-9800-46aa-b181-7b6f0f2b919a}" />
+          <AitFeature Name="{ebbc7157-d3c8-47da-acde-f82388d5f716}" />
+          <AitFeature Name="{ec0072f3-2118-4049-9ebc-17f0ab692b64}" />
+          <AitFeature Name="{ec4a9af3-620d-4c69-add7-9794e918081f}" />
+          <AitFeature Name="{ee30a0c9-ce56-4865-ba8e-8954ac271107}" />
+          <AitFeature Name="{eeaeb062-743d-456e-84a3-23f06f2d15d7}" />
+          <AitFeature Name="{eeaf2fcb-621e-4b62-ac77-b281cce08d60}" />
+          <AitFeature Name="{f0e24ab0-dd09-42e1-b0bc-e0e131f78d7e}" />
+          <AitFeature Name="{f312f365-bb77-4c94-802d-8328cee40c08}" />
+          <AitFeature Name="{f404e97b-9034-453c-8ebf-140a38c86f1d}" />
+          <AitFeature Name="{f4903d9b-9e61-4de2-a732-2687c07d1de8}" />
+          <AitFeature Name="{f625aa5d-2354-4cc7-9230-96941c969fde}" />
+          <AitFeature Name="{f6359621-a79d-4ed3-8c32-a9ef9d6b76a4}" />
+          <AitFeature Name="{f67cf363-a53d-4d94-ae2c-67232d93acdd}" />
+          <AitFeature Name="{f6dc31e7-4b13-45c5-8897-7d71269e085d}" />
+          <AitFeature Name="{f6f83553-aa27-4731-8e4a-3dec5ce9eec9}" />
+          <AitFeature Name="{f79932d7-2fdf-43fe-8f18-41897390bcfe}" />
+          <AitFeature Name="{fa3f6186-4214-428c-a64c-14c9ac7315ea}" />
+          <AitFeature Name="{faab5cd0-8924-45ac-ad0f-a08fae5d0324}" />
+          <AitFeature Name="{fb1232d6-ee73-46e7-8761-11cd0157728f}" />
+          <AitFeature Name="{fb67a508-2dad-490a-9170-dca036eb114b}" />
+          <AitFeature Name="{fbc93e26-a14a-4b4f-82b0-33bed920af52}" />
+          <AitFeature Name="{fdacec38-3700-4d73-91a1-2f998674238a}" />
+          <AitFeature Name="{fe0e8147-c4c0-4562-b962-1327b52ad5b9}" />
+          <AitFeature Name="{fe98ae66-b205-4934-9174-0ff2b0565707}" />
+          <AitFeature Name="{fef6a824-2fe1-4d07-a35b-b77c50b5f4cc}" />
+          <AitFeature Name="{ff1c4c4a-9287-470b-836e-9086e3126ade}" />
+          <AitFeature Name="{ffcedb2b-8ade-44a5-bb00-164c4e72f13a}" />
+        </AitCategory>
+        <AitCategory Id="ApiStatic">
+          <AitFeature Name="api-ms-win-core-handle-l1-1-0.dll!CloseHandle" />
+          <AitFeature Name="api-ms-win-core-profile-l1-1-0.dll!QueryPerformanceCounter" />
+          <AitFeature Name="api-ms-win-core-timezone-l1-1-0.dll!SystemTimeToFileTime" />
+          <AitFeature Name="api-ms-win-core-string-l1-1-0.dll!MultiByteToWideChar" />
+          <AitFeature Name="api-ms-win-core-string-l1-1-0.dll!WideCharToMultiByte" />
+          <AitFeature Name="api-ms-win-core-winrt-l1-1-0.dll!RoInitialize" />
+          <AitFeature Name="api-ms-win-core-interlocked-l1-2-0.dll!InitializeSListHead" />
+          <AitFeature Name="api-ms-win-core-synch-l1-2-0.dll!CreateEventExW" />
+          <AitFeature Name="api-ms-win-core-synch-l1-2-0.dll!DeleteCriticalSection" />
+          <AitFeature Name="api-ms-win-core-synch-l1-2-0.dll!EnterCriticalSection" />
+          <AitFeature Name="api-ms-win-core-synch-l1-2-0.dll!InitializeCriticalSectionEx" />
+          <AitFeature Name="api-ms-win-core-synch-l1-2-0.dll!LeaveCriticalSection" />
+          <AitFeature Name="api-ms-win-core-synch-l1-2-0.dll!TryEnterCriticalSection" />
+          <AitFeature Name="api-ms-win-core-synch-l1-2-0.dll!WaitForSingleObjectEx" />
+          <AitFeature Name="api-ms-win-core-heap-l1-2-0.dll!GetProcessHeap" />
+          <AitFeature Name="api-ms-win-core-heap-l1-2-0.dll!HeapAlloc" />
+          <AitFeature Name="api-ms-win-core-heap-l1-2-0.dll!HeapFree" />
+          <AitFeature Name="api-ms-win-core-heap-l1-2-0.dll!HeapReAlloc" />
+          <AitFeature Name="api-ms-win-core-heap-l1-2-0.dll!HeapSize" />
+          <AitFeature Name="api-ms-win-core-libraryloader-l1-2-0.dll!DisableThreadLibraryCalls" />
+          <AitFeature Name="api-ms-win-core-libraryloader-l1-2-0.dll!FreeLibrary" />
+          <AitFeature Name="api-ms-win-core-libraryloader-l1-2-0.dll!GetProcAddress" />
+          <AitFeature Name="api-ms-win-core-errorhandling-l1-1-1.dll!GetLastError" />
+          <AitFeature Name="api-ms-win-core-debug-l1-1-1.dll!OutputDebugStringW" />
+          <AitFeature Name="api-ms-win-core-file-l2-1-1.dll!GetFileInformationByHandleEx" />
+          <AitFeature Name="api-ms-win-core-file-l1-2-1.dll!CreateFile2" />
+          <AitFeature Name="api-ms-win-core-file-l1-2-1.dll!DeleteFileW" />
+          <AitFeature Name="api-ms-win-core-file-l1-2-1.dll!FlushFileBuffers" />
+          <AitFeature Name="api-ms-win-core-file-l1-2-1.dll!GetFileAttributesExW" />
+          <AitFeature Name="api-ms-win-core-file-l1-2-1.dll!LockFileEx" />
+          <AitFeature Name="api-ms-win-core-file-l1-2-1.dll!ReadFile" />
+          <AitFeature Name="api-ms-win-core-file-l1-2-1.dll!SetEndOfFile" />
+          <AitFeature Name="api-ms-win-core-file-l1-2-1.dll!SetFilePointerEx" />
+          <AitFeature Name="api-ms-win-core-file-l1-2-1.dll!UnlockFileEx" />
+          <AitFeature Name="api-ms-win-core-file-l1-2-1.dll!WriteFile" />
+          <AitFeature Name="api-ms-win-core-localization-l1-2-1.dll!FormatMessageW" />
+          <AitFeature Name="api-ms-win-core-sysinfo-l1-2-1.dll!GetNativeSystemInfo" />
+          <AitFeature Name="api-ms-win-core-sysinfo-l1-2-1.dll!GetSystemTime" />
+          <AitFeature Name="api-ms-win-core-sysinfo-l1-2-1.dll!GetSystemTimeAsFileTime" />
+          <AitFeature Name="api-ms-win-core-sysinfo-l1-2-1.dll!GetTickCount64" />
+          <AitFeature Name="api-ms-win-core-processthreads-l1-1-2.dll!GetCurrentProcessId" />
+          <AitFeature Name="api-ms-win-core-processthreads-l1-1-2.dll!GetCurrentThreadId" />
+          <AitFeature Name="api-ms-win-core-memory-l1-1-2.dll!CreateFileMappingFromApp" />
+          <AitFeature Name="api-ms-win-core-memory-l1-1-2.dll!FlushViewOfFile" />
+          <AitFeature Name="api-ms-win-core-memory-l1-1-2.dll!MapViewOfFileFromApp" />
+          <AitFeature Name="api-ms-win-core-memory-l1-1-2.dll!UnmapViewOfFile" />
+        </AitCategory>
+        <AitCategory Id="WRTClassFromSearch">
+          <AitFeature Name="Windows.ApplicationModel.Calls.LockScreenCallUI" />
+          <AitFeature Name="Windows.Storage.Pickers.Provider.FileSavePickerUI" />
+          <AitFeature Name="Windows.Storage.Pickers.Provider.FileOpenPickerUI" />
+          <AitFeature Name="Windows.ApplicationModel.Contacts.Provider.ContactPickerUI" />
+          <AitFeature Name="Windows.Storage.Provider.CachedFileUpdaterUI" />
+          <AitFeature Name="Windows.Storage.FileIO" />
+          <AitFeature Name="Windows.Storage.PathIO" />
+          <AitFeature Name="Windows.Storage.ApplicationData" />
+          <AitFeature Name="Windows.ApplicationModel.PackageId" />
+          <AitFeature Name="Windows.ApplicationModel.Contacts.ContactInstantMessageField" />
+          <AitFeature Name="Windows.ApplicationModel.Contacts.ContactLocationField" />
+          <AitFeature Name="Windows.ApplicationModel.Contacts.ContactField" />
+          <AitFeature Name="Windows.ApplicationModel.Contacts.KnownContactField" />
+          <AitFeature Name="Windows.UI.Popups.UICommand" />
+          <AitFeature Name="Windows.ApplicationModel.DataTransfer.Clipboard" />
+          <AitFeature Name="Windows.Devices.Input.MouseDevice" />
+          <AitFeature Name="Windows.Devices.Input.PointerDevice" />
+          <AitFeature Name="Windows.Storage.Streams.RandomAccessStreamReference" />
+          <AitFeature Name="Windows.ApplicationModel.Appointments.AppointmentRecurrence" />
+          <AitFeature Name="Windows.UI.Core.CoreIndependentInputSource" />
+          <AitFeature Name="Windows.UI.Core.CoreComponentInputSource" />
+          <AitFeature Name="Windows.ApplicationModel.DesignMode" />
+          <AitFeature Name="Windows.ApplicationModel.Appointments.AppointmentInvitee" />
+          <AitFeature Name="Windows.ApplicationModel.Package" />
+          <AitFeature Name="Windows.ApplicationModel.DataTransfer.DataPackage" />
+          <AitFeature Name="Windows.Storage.Search.ValueAndLanguage" />
+          <AitFeature Name="Windows.Storage.StorageFile" />
+          <AitFeature Name="Windows.ApplicationModel.Search.SearchPane" />
+          <AitFeature Name="Windows.UI.ViewManagement.InputPane" />
+          <AitFeature Name="Windows.ApplicationModel.Contacts.ContactPhone" />
+          <AitFeature Name="Windows.UI.Input.EdgeGesture" />
+          <AitFeature Name="Windows.ApplicationModel.Contacts.ContactDate" />
+          <AitFeature Name="Windows.ApplicationModel.Contacts.ContactWebsite" />
+          <AitFeature Name="Windows.Storage.ApplicationDataCompositeValue" />
+          <AitFeature Name="Windows.Foundation.PropertyValue" />
+          <AitFeature Name="Windows.UI.Popups.MessageDialog" />
+          <AitFeature Name="Windows.UI.Core.CoreWindowDialog" />
+          <AitFeature Name="Windows.Foundation.Uri" />
+          <AitFeature Name="Windows.ApplicationModel.DataTransfer.ShareTarget.QuickLink" />
+          <AitFeature Name="Windows.Devices.Printers.Extensions.PrintTaskConfigurationSaveRequestedDeferral" />
+          <AitFeature Name="Windows.ApplicationModel.SuspendingDeferral" />
+          <AitFeature Name="Windows.Storage.Pickers.Provider.PickerClosingDeferral" />
+          <AitFeature Name="Windows.ApplicationModel.Calls.LockScreenCallEndCallDeferral" />
+          <AitFeature Name="Windows.Storage.SetVersionDeferral" />
+          <AitFeature Name="Windows.ApplicationModel.DataTransfer.DataProviderDeferral" />
+          <AitFeature Name="Windows.ApplicationModel.DataTransfer.DataRequestDeferral" />
+          <AitFeature Name="Windows.Storage.Pickers.Provider.TargetFileRequestDeferral" />
+          <AitFeature Name="Windows.Storage.Provider.FileUpdateRequestDeferral" />
+          <AitFeature Name="Windows.ApplicationModel.Search.SearchPaneSuggestionsRequestDeferral" />
+          <AitFeature Name="Windows.ApplicationModel.Search.SearchSuggestionsRequestDeferral" />
+          <AitFeature Name="Windows.ApplicationModel.Contacts.ContactEmail" />
+          <AitFeature Name="Windows.Storage.FileProperties.StorageItemThumbnail" />
+          <AitFeature Name="Windows.Storage.Streams.RandomAccessStreamOverStream" />
+          <AitFeature Name="Windows.Storage.Streams.InputStreamOverStream" />
+          <AitFeature Name="Windows.Storage.Streams.OutputStreamOverStream" />
+          <AitFeature Name="Windows.Storage.Streams.RandomAccessStream" />
+          <AitFeature Name="Windows.Storage.Streams.FileRandomAccessStream" />
+          <AitFeature Name="Windows.Storage.Streams.InMemoryRandomAccessStream" />
+          <AitFeature Name="Windows.Storage.Streams.FileInputStream" />
+          <AitFeature Name="Windows.Storage.Streams.FileOutputStream" />
+          <AitFeature Name="Windows.Data.Text.AlternateWordForm" />
+          <AitFeature Name="Windows.ApplicationModel.Activation.SplashScreen" />
+          <AitFeature Name="Windows.ApplicationModel.Contacts.ContactInformation" />
+          <AitFeature Name="Windows.Storage.Streams.DataReaderLoadOperation" />
+          <AitFeature Name="Windows.ApplicationModel.DataTransfer.ShareTarget.ShareOperation" />
+          <AitFeature Name="Windows.Storage.Streams.DataWriterStoreOperation" />
+          <AitFeature Name="Windows.ApplicationModel.SuspendingOperation" />
+          <AitFeature Name="Windows.Storage.Pickers.Provider.PickerClosingOperation" />
+          <AitFeature Name="Windows.ApplicationModel.Appointments.AppointmentsProvider.AddAppointmentOperation" />
+          <AitFeature Name="Windows.ApplicationModel.Appointments.AppointmentsProvider.ReplaceAppointmentOperation" />
+          <AitFeature Name="Windows.ApplicationModel.Appointments.AppointmentsProvider.RemoveAppointmentOperation" />
+          <AitFeature Name="Windows.Devices.Printers.Extensions.PrintTaskConfiguration" />
+          <AitFeature Name="Windows.Storage.StorageStreamTransaction" />
+          <AitFeature Name="Windows.ApplicationModel.Contacts.ContactJobInfo" />
+          <AitFeature Name="Windows.Storage.Streams.DataReader" />
+          <AitFeature Name="Windows.ApplicationModel.Contacts.ContactCardDelayedDataLoader" />
+          <AitFeature Name="Windows.Storage.StorageProvider" />
+          <AitFeature Name="Windows.Storage.StorageFolder" />
+          <AitFeature Name="Windows.Storage.DownloadsFolder" />
+          <AitFeature Name="Windows.Foundation.WwwFormUrlDecoder" />
+          <AitFeature Name="Windows.Storage.Streams.Buffer" />
+          <AitFeature Name="Windows.Storage.CachedFileManager" />
+          <AitFeature Name="Windows.UI.Core.CoreWindowResizeManager" />
+          <AitFeature Name="Windows.UI.ViewManagement.ProjectionManager" />
+          <AitFeature Name="Windows.ApplicationModel.DataTransfer.DataTransferManager" />
+          <AitFeature Name="Windows.ApplicationModel.Contacts.ContactManager" />
+          <AitFeature Name="Windows.ApplicationModel.Appointments.AppointmentManager" />
+          <AitFeature Name="Windows.System.Launcher" />
+          <AitFeature Name="Windows.UI.ViewManagement.ApplicationViewSwitcher" />
+          <AitFeature Name="Windows.ApplicationModel.Contacts.ContactSignificantOther" />
+          <AitFeature Name="Windows.ApplicationModel.Contacts.ContactPicker" />
+          <AitFeature Name="Windows.UI.ColorHelper" />
+          <AitFeature Name="Windows.ApplicationModel.DataTransfer.HtmlFormatHelper" />
+          <AitFeature Name="Windows.Storage.Provider.CachedFileUpdater" />
+          <AitFeature Name="Windows.Storage.Streams.DataWriter" />
+          <AitFeature Name="Windows.Data.Text.WordsSegmenter" />
+          <AitFeature Name="Windows.Data.Text.SelectableWordsSegmenter" />
+          <AitFeature Name="Windows.Storage.Search.ContentIndexer" />
+          <AitFeature Name="Windows.ApplicationModel.Appointments.AppointmentOrganizer" />
+          <AitFeature Name="Windows.UI.Input.GestureRecognizer" />
+          <AitFeature Name="Windows.ApplicationModel.Core.UnhandledError" />
+          <AitFeature Name="Windows.UI.Core.CoreCursor" />
+          <AitFeature Name="Windows.UI.Popups.UICommandSeparator" />
+          <AitFeature Name="Windows.Storage.Search.SortEntryVector" />
+          <AitFeature Name="Windows.ApplicationModel.Appointments.AppointmentsProvider.AppointmentsProviderLaunchActionVerbs" />
+          <AitFeature Name="Windows.ApplicationModel.Contacts.ContactLaunchActionVerbs" />
+          <AitFeature Name="Windows.Devices.Input.KeyboardCapabilities" />
+          <AitFeature Name="Windows.Devices.Input.MouseCapabilities" />
+          <AitFeature Name="Windows.Devices.Input.TouchCapabilities" />
+          <AitFeature Name="Windows.Storage.SystemGPSProperties" />
+          <AitFeature Name="Windows.Storage.FileProperties.DocumentProperties" />
+          <AitFeature Name="Windows.Storage.FileProperties.StorageItemContentProperties" />
+          <AitFeature Name="Windows.UI.Input.PointerPointProperties" />
+          <AitFeature Name="Windows.UI.ViewManagement.UISettings" />
+          <AitFeature Name="Windows.UI.Input.PointerVisualizationSettings" />
+          <AitFeature Name="Windows.ApplicationModel.Search.LocalContentSuggestionSettings" />
+          <AitFeature Name="Windows.Storage.ApplicationDataContainerSettings" />
+          <AitFeature Name="Windows.UI.ViewManagement.AccessibilitySettings" />
+          <AitFeature Name="Windows.UI.Core.IdleDispatchedHandlerArgs" />
+          <AitFeature Name="Windows.UI.Core.WindowSizeChangedEventArgs" />
+          <AitFeature Name="Windows.ApplicationModel.Search.SearchPaneQueryChangedEventArgs" />
+          <AitFeature Name="Windows.UI.Core.VisibilityChangedEventArgs" />
+          <AitFeature Name="Windows.ApplicationModel.Search.SearchPaneVisibilityChangedEventArgs" />
+          <AitFeature Name="Windows.UI.Core.InputEnabledEventArgs" />
+          <AitFeature Name="Windows.UI.Input.TappedEventArgs" />
+          <AitFeature Name="Windows.UI.Input.RightTappedEventArgs" />
+          <AitFeature Name="Windows.UI.ViewManagement.ApplicationViewConsolidatedEventArgs" />
+          <AitFeature Name="Windows.UI.Input.ManipulationUpdatedEventArgs" />
+          <AitFeature Name="Windows.ApplicationModel.Activation.DeviceActivatedEventArgs" />
+          <AitFeature Name="Windows.ApplicationModel.Activation.ContactMessageActivatedEventArgs" />
+          <AitFeature Name="Windows.ApplicationModel.Activation.FileActivatedEventArgs" />
+          <AitFeature Name="Windows.ApplicationModel.Activation.AppointmentsProviderShowTimeFrameActivatedEventArgs" />
+          <AitFeature Name="Windows.ApplicationModel.Activation.LaunchActivatedEventArgs" />
+          <AitFeature Name="Windows.ApplicationModel.Activation.SearchActivatedEventArgs" />
+          <AitFeature Name="Windows.ApplicationModel.Activation.LockScreenCallActivatedEventArgs" />
+          <AitFeature Name="Windows.ApplicationModel.Activation.ContactVideoCallActivatedEventArgs" />
+          <AitFeature Name="Windows.ApplicationModel.Activation.ContactCallActivatedEventArgs" />
+          <AitFeature Name="Windows.ApplicationModel.Activation.ProtocolActivatedEventArgs" />
+          <AitFeature Name="Windows.ApplicationModel.Activation.ContactMapActivatedEventArgs" />
+          <AitFeature Name="Windows.ApplicationModel.Activation.FileSavePickerActivatedEventArgs" />
+          <AitFeature Name="Windows.ApplicationModel.Activation.FileOpenPickerActivatedEventArgs" />
+          <AitFeature Name="Windows.ApplicationModel.Activation.ContactPickerActivatedEventArgs" />
+          <AitFeature Name="Windows.ApplicationModel.Activation.CachedFileUpdaterActivatedEventArgs" />
+          <AitFeature Name="Windows.ApplicationModel.Activation.CameraSettingsActivatedEventArgs" />
+          <AitFeature Name="Windows.ApplicationModel.Activation.PrintTaskSettingsActivatedEventArgs" />
+          <AitFeature Name="Windows.ApplicationModel.Activation.ShareTargetActivatedEventArgs" />
+          <AitFeature Name="Windows.ApplicationModel.Activation.AppointmentsProviderAddAppointmentActivatedEventArgs" />
+          <AitFeature Name="Windows.ApplicationModel.Activation.AppointmentsProviderReplaceAppointmentActivatedEventArgs" />
+          <AitFeature Name="Windows.ApplicationModel.Activation.AppointmentsProviderRemoveAppointmentActivatedEventArgs" />
+          <AitFeature Name="Windows.ApplicationModel.Activation.ContactPostActivatedEventArgs" />
+          <AitFeature Name="Windows.UI.Core.WindowActivatedEventArgs" />
+          <AitFeature Name="Windows.ApplicationModel.Core.UnhandledErrorDetectedEventArgs" />
+          <AitFeature Name="Windows.UI.Input.ManipulationCompletedEventArgs" />
+          <AitFeature Name="Windows.ApplicationModel.DataTransfer.OperationCompletedEventArgs" />
+          <AitFeature Name="Windows.UI.Input.ManipulationStartedEventArgs" />
+          <AitFeature Name="Windows.ApplicationModel.DataTransfer.DataRequestedEventArgs" />
+          <AitFeature Name="Windows.ApplicationModel.Calls.LockScreenCallEndRequestedEventArgs" />
+          <AitFeature Name="Windows.Storage.Pickers.Provider.TargetFileRequestedEventArgs" />
+          <AitFeature Name="Windows.Storage.Provider.FileUpdateRequestedEventArgs" />
+          <AitFeature Name="Windows.Devices.Printers.Extensions.PrintTaskConfigurationSaveRequestedEventArgs" />
+          <AitFeature Name="Windows.UI.Core.AutomationProviderRequestedEventArgs" />
+          <AitFeature Name="Windows.ApplicationModel.Search.SearchPaneSuggestionsRequestedEventArgs" />
+          <AitFeature Name="Windows.ApplicationModel.Search.SearchPaneQuerySubmittedEventArgs" />
+          <AitFeature Name="Windows.UI.Core.CharacterReceivedEventArgs" />
+          <AitFeature Name="Windows.Storage.Pickers.Provider.FileRemovedEventArgs" />
+          <AitFeature Name="Windows.ApplicationModel.Contacts.Provider.ContactRemovedEventArgs" />
+          <AitFeature Name="Windows.UI.Input.EdgeGestureEventArgs" />
+          <AitFeature Name="Windows.Devices.Input.MouseEventArgs" />
+          <AitFeature Name="Windows.UI.Input.CrossSlidingEventArgs" />
+          <AitFeature Name="Windows.UI.Input.HoldingEventArgs" />
+          <AitFeature Name="Windows.ApplicationModel.SuspendingEventArgs" />
+          <AitFeature Name="Windows.UI.Input.DraggingEventArgs" />
+          <AitFeature Name="Windows.Storage.Pickers.Provider.PickerClosingEventArgs" />
+          <AitFeature Name="Windows.UI.Input.ManipulationInertiaStartingEventArgs" />
+          <AitFeature Name="Windows.UI.Core.TouchHitTestingEventArgs" />
+          <AitFeature Name="Windows.UI.Core.CoreWindowPopupShowingEventArgs" />
+          <AitFeature Name="Windows.UI.Core.PointerEventArgs" />
+          <AitFeature Name="Windows.UI.Core.CoreWindowEventArgs" />
+          <AitFeature Name="Windows.UI.Core.KeyEventArgs" />
+          <AitFeature Name="Windows.UI.Core.AcceleratorKeyEventArgs" />
+          <AitFeature Name="Windows.UI.ViewManagement.InputPaneVisibilityEventArgs" />
+          <AitFeature Name="Windows.ApplicationModel.Search.SearchPaneQueryLinguisticDetails" />
+          <AitFeature Name="Windows.ApplicationModel.Search.SearchQueryLinguisticDetails" />
+          <AitFeature Name="Windows.Devices.Printers.Extensions.PrintNotificationEventDetails" />
+          <AitFeature Name="Windows.System.LauncherUIOptions" />
+          <AitFeature Name="Windows.System.LauncherOptions" />
+          <AitFeature Name="Windows.Storage.Search.QueryOptions" />
+          <AitFeature Name="Windows.Storage.KnownFolders" />
+          <AitFeature Name="Windows.Data.Text.UnicodeCharacters" />
+          <AitFeature Name="Windows.UI.Input.MouseWheelParameters" />
+          <AitFeature Name="Windows.UI.Colors" />
+          <AitFeature Name="Windows.ApplicationModel.Contacts.ContactAddress" />
+          <AitFeature Name="Windows.ApplicationModel.DataTransfer.StandardDataFormats" />
+          <AitFeature Name="Windows.UI.Core.CoreAcceleratorKeys" />
+          <AitFeature Name="Windows.ApplicationModel.Contacts.Contact" />
+          <AitFeature Name="Windows.Foundation.Collections.PropertySet" />
+          <AitFeature Name="Windows.ApplicationModel.DataTransfer.DataPackagePropertySet" />
+          <AitFeature Name="Windows.Storage.Search.StorageFileQueryResult" />
+          <AitFeature Name="Windows.Storage.Search.StorageItemQueryResult" />
+          <AitFeature Name="Windows.Storage.Search.StorageFolderQueryResult" />
+          <AitFeature Name="Windows.Data.Text.WordSegment" />
+          <AitFeature Name="Windows.Data.Text.SelectableWordSegment" />
+          <AitFeature Name="Windows.ApplicationModel.Appointments.Appointment" />
+          <AitFeature Name="Windows.Storage.Search.IndexableContent" />
+          <AitFeature Name="Windows.UI.Input.PointerPoint" />
+          <AitFeature Name="Windows.ApplicationModel.Contacts.ContactConnectedServiceAccount" />
+          <AitFeature Name="Windows.ApplicationModel.DataTransfer.DataRequest" />
+          <AitFeature Name="Windows.Storage.StreamedFileDataRequest" />
+          <AitFeature Name="Windows.Storage.Pickers.Provider.TargetFileRequest" />
+          <AitFeature Name="Windows.Storage.Provider.FileUpdateRequest" />
+          <AitFeature Name="Windows.Devices.Printers.Extensions.PrintTaskConfigurationSaveRequest" />
+          <AitFeature Name="Windows.Storage.SetVersionRequest" />
+          <AitFeature Name="Windows.ApplicationModel.DataTransfer.DataProviderRequest" />
+          <AitFeature Name="Windows.ApplicationModel.Search.SearchPaneSuggestionsRequest" />
+          <AitFeature Name="Windows.ApplicationModel.Search.SearchSuggestionsRequest" />
+          <AitFeature Name="Windows.UI.Core.CoreWindowFlyout" />
+          <AitFeature Name="Windows.Devices.Printers.Extensions.PrintExtensionContext" />
+          <AitFeature Name="Windows.UI.Popups.PopupMenu" />
+          <AitFeature Name="Windows.ApplicationModel.DataTransfer.DataPackageView" />
+          <AitFeature Name="Windows.UI.ViewManagement.ApplicationView" />
+          <AitFeature Name="Windows.ApplicationModel.Core.CoreApplicationView" />
+          <AitFeature Name="Windows.ApplicationModel.DataTransfer.DataPackagePropertySetView" />
+          <AitFeature Name="Windows.UI.Core.CoreWindow" />
+          <AitFeature Name="Windows.Storage.StorageLibrary" />
+          <AitFeature Name="Windows.Storage.Search.ContentIndexerQuery" />
+          <AitFeature Name="Windows.Data.Text.SemanticTextQuery" />
+          <AitFeature Name="Windows.ApplicationModel.Contacts.ContactFieldFactory" />
+          <AitFeature Name="Windows.Foundation.WwwFormUrlDecoderEntry" />
+        </AitCategory>
+      </AitFile>
+      <AitFile ErrorCode="0" Name="Lane.dll" Id="000062c09122383be56be2d8847dc4dd2313b2554f05">
+        <AitCategory Id="Com">
+          <AitFeature Name="{00000000-0000-0000-c000-000000000046}" />
+          <AitFeature Name="{00000003-0000-0000-c000-000000000046}" />
+          <AitFeature Name="{00000035-0000-0000-c000-000000000046}" />
+          <AitFeature Name="{00000036-0000-0000-c000-000000000046}" />
+          <AitFeature Name="{00000037-0000-0000-c000-000000000046}" />
+          <AitFeature Name="{00000038-0000-0000-c000-000000000046}" />
+          <AitFeature Name="{0000033a-0000-0000-c000-000000000046}" />
+          <AitFeature Name="{00020401-0000-0000-c000-000000000046}" />
+          <AitFeature Name="{00020402-0000-0000-c000-000000000046}" />
+          <AitFeature Name="{00020403-0000-0000-c000-000000000046}" />
+          <AitFeature Name="{01e9a621-4a64-4ed9-954f-9edeb07bd903}" />
+          <AitFeature Name="{02ee93d4-448e-469e-9799-0a8a1f70f171}" />
+          <AitFeature Name="{03362e33-e413-5f29-97d0-48a4780935f9}" />
+          <AitFeature Name="{036d2c08-df29-41af-8aa2-d774be62ba6f}" />
+          <AitFeature Name="{0373599e-dd7b-5fd0-a8fc-4677efc67ec6}" />
+          <AitFeature Name="{0385688e-e3c7-5c5e-a389-5524ede349f1}" />
+          <AitFeature Name="{04a2dbf3-df83-116c-0946-0812abf6e07d}" />
+          <AitFeature Name="{04b3486c-4687-4229-8d14-505ab584dd88}" />
+          <AitFeature Name="{05b487c2-3830-5d3c-98da-25fa11542dbd}" />
+          <AitFeature Name="{05eb86f1-7140-5517-b88d-cbaebe57e6b1}" />
+          <AitFeature Name="{06386a7a-e009-5b0b-ab68-a8e48b516647}" />
+          <AitFeature Name="{06499997-f7b4-45fe-b763-7577d1d3cb4a}" />
+          <AitFeature Name="{064e24dd-29c2-4f83-9ac1-9ee11578beb3}" />
+          <AitFeature Name="{07deeaa7-018f-4dda-b399-fd4e13a31bea}" />
+          <AitFeature Name="{08add66d-0e2e-43a0-aeca-8faa94b9d017}" />
+          <AitFeature Name="{08c1ddb6-0cbd-4a9a-b5d3-2f852dc37e81}" />
+          <AitFeature Name="{08c245e1-6ea8-581c-98a2-fac6be82cecf}" />
+          <AitFeature Name="{09108f87-df6c-4180-9b3a-e60845825811}" />
+          <AitFeature Name="{09223e5a-75be-4499-8180-1ddc005421c0}" />
+          <AitFeature Name="{092b849b-60b1-52be-a44a-6fe8e933cbe4}" />
+          <AitFeature Name="{09335560-6c6b-5a26-9348-97b781132b20}" />
+          <AitFeature Name="{0aacf7a4-5e1d-49df-8034-fb6a68bc5ed1}" />
+          <AitFeature Name="{0c44717b-19f7-48d6-b046-cf22826eaa74}" />
+          <AitFeature Name="{0c7d1423-e8fd-5a91-b55c-8bfbe7ac2d40}" />
+          <AitFeature Name="{0c9de975-3ccc-5d35-8404-9f5dbf22a0ea}" />
+          <AitFeature Name="{0db89161-20d7-45df-9122-ba89576703ba}" />
+          <AitFeature Name="{0ffb101a-bc7d-50c3-8193-55cdf7448fa2}" />
+          <AitFeature Name="{10406ad6-b090-4a4a-b2ad-d682df27130f}" />
+          <AitFeature Name="{105d237b-a34b-5c29-98e3-6513fde1eda1}" />
+          <AitFeature Name="{108469cf-7a68-52b8-8b1a-69a60b7d4191}" />
+          <AitFeature Name="{10d0b04e-bfe4-42cb-823c-3fecd8770ef8}" />
+          <AitFeature Name="{10fb738b-a63b-506e-9ed7-2eab37915221}" />
+          <AitFeature Name="{1115b13c-25d2-480b-89dc-eb3dcbd6b7fa}" />
+          <AitFeature Name="{11c1dff7-36c2-4102-b2ef-0217a97289b3}" />
+          <AitFeature Name="{11d3b13a-180e-4789-a8be-7712882893e6}" />
+          <AitFeature Name="{11fcbfc8-f93a-471b-b121-f379e349313c}" />
+          <AitFeature Name="{125e7431-f678-4e8e-b670-20a9b06c512d}" />
+          <AitFeature Name="{1589a2ab-3d15-49bc-a447-8a5448e58870}" />
+          <AitFeature Name="{163727cf-af03-5ada-b979-d759cc10605f}" />
+          <AitFeature Name="{163c792f-bd75-413c-bf23-b1fe7b95d825}" />
+          <AitFeature Name="{1791587a-2a7c-4981-a2d8-ab99fffc65b9}" />
+          <AitFeature Name="{179d65e7-4658-4cb6-aa13-41d094ea255e}" />
+          <AitFeature Name="{18026348-8619-4c7b-b534-ced45d9de219}" />
+          <AitFeature Name="{1896faee-23e2-59ca-9802-0f48eed98ef4}" />
+          <AitFeature Name="{189eb512-5a20-5ec6-9866-60af96f0d23b}" />
+          <AitFeature Name="{18d636b7-53a4-4c15-a498-f3a9ca212a42}" />
+          <AitFeature Name="{1957e9ec-1fdd-5b6d-8664-b6fce4400e43}" />
+          <AitFeature Name="{1a8a9d02-e482-461b-b8c7-8efad1cce590}" />
+          <AitFeature Name="{1ada0e3e-e4a2-4123-b451-dc96bf800419}" />
+          <AitFeature Name="{1adb665e-37c7-4790-9980-dd7ae74e8bb2}" />
+          <AitFeature Name="{1b0d3570-0877-5ec2-8a2c-3b9539506aca}" />
+          <AitFeature Name="{1b5d1336-e61b-4d51-be41-fd8ddc55c58c}" />
+          <AitFeature Name="{1b8e9594-588e-5a07-9e65-0731a4c9a2db}" />
+          <AitFeature Name="{1c741d59-2122-47d5-a856-83f3d4214875}" />
+          <AitFeature Name="{1c98c219-0b13-4240-89a5-d495dc189a00}" />
+          <AitFeature Name="{1cc0fdfc-69ee-4e43-9901-47f12687baf7}" />
+          <AitFeature Name="{1d1a8b8b-fa66-414f-9cbd-b65fc99d17fa}" />
+          <AitFeature Name="{1d1f9d60-d53b-57f7-b144-8f7c487846e8}" />
+          <AitFeature Name="{1e036276-2f60-55f6-b7f3-f86079e6900b}" />
+          <AitFeature Name="{1e466dc5-840f-54f9-b877-5e3a9f4b6c74}" />
+          <AitFeature Name="{1f365bb6-edc9-5f0b-becd-209ebfedef55}" />
+          <AitFeature Name="{1f7df263-c14b-4528-b6f0-637999d83cc6}" />
+          <AitFeature Name="{1f93cd7a-8075-5ba9-bc3e-b04a94e14bc0}" />
+          <AitFeature Name="{230b9cb8-3419-4306-aabe-4a8e680d3627}" />
+          <AitFeature Name="{23429465-e36a-40e2-b139-a4704602a6e1}" />
+          <AitFeature Name="{236aac9d-fb12-5c4d-a41c-9e445fb4d7ec}" />
+          <AitFeature Name="{23d156c7-7ef9-5096-aaba-1e6c9ab5ceb4}" />
+          <AitFeature Name="{243a09cb-6f40-56af-a442-fe81431fbef5}" />
+          <AitFeature Name="{246a91a9-ca43-4c0b-acef-81e8b8147520}" />
+          <AitFeature Name="{24b935e3-52c7-4141-8bac-a73d06130569}" />
+          <AitFeature Name="{24f981e5-ddca-538d-aada-a59906084cf1}" />
+          <AitFeature Name="{2532a062-f447-4950-9c46-f1e34a2c2238}" />
+          <AitFeature Name="{25f99ff7-9347-459a-9fac-b2d0e11c1a0f}" />
+          <AitFeature Name="{2603682a-9da6-4023-b496-496e5ef228d2}" />
+          <AitFeature Name="{272b1ef3-c633-4da5-a26c-c6d0f56b29da}" />
+          <AitFeature Name="{280335ae-5570-46c7-8e0b-602be71229a2}" />
+          <AitFeature Name="{2891cfcd-a273-5187-9a8d-17e16bbf966f}" />
+          <AitFeature Name="{28b167d5-1a31-465b-9b25-d5c3ae686c40}" />
+          <AitFeature Name="{28f6d4c0-fb12-40a4-8167-7f4e03d2724c}" />
+          <AitFeature Name="{29a71c6a-3c42-4416-a39d-e2825a07a773}" />
+          <AitFeature Name="{29f8d454-905d-587e-b9d8-bfd418805a65}" />
+          <AitFeature Name="{2a8b3c45-2472-54c7-983b-152d158fb804}" />
+          <AitFeature Name="{2ab1a205-1e73-4bcf-aabc-57b97e21961d}" />
+          <AitFeature Name="{2af22683-3734-56d0-a60e-688cc85d1619}" />
+          <AitFeature Name="{2bf27008-2eb4-5675-b1cd-e9906cc5ce64}" />
+          <AitFeature Name="{2d162925-5966-4bfa-8638-4d345689f6cf}" />
+          <AitFeature Name="{2f13c006-a03a-5f69-b090-75a43e33423e}" />
+          <AitFeature Name="{2f149f1a-e673-40b5-bc22-201a6864a37b}" />
+          <AitFeature Name="{2f2d6c29-5473-5f3e-92e7-96572bb990e2}" />
+          <AitFeature Name="{2fa22f4b-707e-4b27-ad0d-d0d8cd468fd2}" />
+          <AitFeature Name="{30160817-1d7d-54e9-99db-d7636266a476}" />
+          <AitFeature Name="{30b50092-36ee-53ff-9450-029004436c60}" />
+          <AitFeature Name="{30d5a829-7fa4-4026-83bb-d75bae4ea99e}" />
+          <AitFeature Name="{30da92c0-23e8-42a0-ae7c-734a0e5d2782}" />
+          <AitFeature Name="{3124d025-04a7-4d45-825e-8204a624dbf4}" />
+          <AitFeature Name="{314d2318-74ee-535c-b361-2144dbc573a0}" />
+          <AitFeature Name="{31b71470-feff-4654-af48-9b398ab5772b}" />
+          <AitFeature Name="{31e55e8a-0f05-52fd-90d3-b04aa331aaa4}" />
+          <AitFeature Name="{320b7e22-3cb0-4cdf-8663-1d28910065eb}" />
+          <AitFeature Name="{3276167d-c9f6-462d-9de2-ae4c1fd8c2e5}" />
+          <AitFeature Name="{32bc12d1-2653-5a41-a55e-88a12af2026a}" />
+          <AitFeature Name="{32e54295-373c-50cb-80a1-468a990ca780}" />
+          <AitFeature Name="{333f740c-04d8-43b3-b278-8c5fcc9be5a0}" />
+          <AitFeature Name="{338579bf-1a35-5cc4-a622-a6f384fd892c}" />
+          <AitFeature Name="{33a0f9f3-efe5-52ec-b689-942c0c699bf1}" />
+          <AitFeature Name="{33ac68f0-1084-529a-8a17-4e7c8adb7a0c}" />
+          <AitFeature Name="{33ee3134-1dd6-4e3a-8067-d1c162e8642b}" />
+          <AitFeature Name="{346dd6e7-976e-4bc3-815d-ece243bc0f33}" />
+          <AitFeature Name="{354c0f34-e691-502a-a444-d5f07aee310e}" />
+          <AitFeature Name="{35aac87a-62ee-4d3e-a24c-2bc8432d68b7}" />
+          <AitFeature Name="{377f6162-6e4d-574e-bf01-77f4fd021d0e}" />
+          <AitFeature Name="{3792bc47-8c4b-4257-a5ae-cc3f8ed786eb}" />
+          <AitFeature Name="{381832a4-3c25-53a4-9bb7-f33ecdcf044f}" />
+          <AitFeature Name="{3830ad99-d8da-53f3-989b-fc92ad222778}" />
+          <AitFeature Name="{38b1ed92-a28a-4972-93df-f4f759b8afd2}" />
+          <AitFeature Name="{38b60434-d67c-523e-9d0e-24d643411073}" />
+          <AitFeature Name="{38ef4b0f-14f8-42df-9a1e-a4bcc4af77f4}" />
+          <AitFeature Name="{39313214-5c7d-599d-ae5a-17d9d6492258}" />
+          <AitFeature Name="{393de7de-6fd0-4c0d-bb71-47244a113e93}" />
+          <AitFeature Name="{398c4183-793d-5b00-819b-4aef92485e94}" />
+          <AitFeature Name="{3aaeab4c-14cb-4434-becc-88a8585c2f89}" />
+          <AitFeature Name="{3b40e9d4-e0c3-56f6-b88b-e505eb73757b}" />
+          <AitFeature Name="{3b542e03-5388-496c-a8a3-affd39aec2e6}" />
+          <AitFeature Name="{3c00fd60-2950-5939-a21a-2d12c5a01b8a}" />
+          <AitFeature Name="{3c1ec44c-e942-54e5-bcd3-e329c951f595}" />
+          <AitFeature Name="{3c51d10d-36d7-40f8-a86d-e759caf2f83f}" />
+          <AitFeature Name="{3d0813ba-6890-4537-bfe5-796d9458edd6}" />
+          <AitFeature Name="{3d54d66f-c4a8-58e8-9a68-53729a6b9095}" />
+          <AitFeature Name="{3df6d14e-e18a-4a75-9395-627c5f3cd489}" />
+          <AitFeature Name="{3e95e30b-557a-5bf3-bf64-235a1a2c0cbf}" />
+          <AitFeature Name="{3f367f87-9f5a-4b04-b818-b554c069597a}" />
+          <AitFeature Name="{3f7a0c6b-d00f-4730-8c1d-48e16c46f9ca}" />
+          <AitFeature Name="{400d5794-4c6f-491d-82d6-3517109399c6}" />
+          <AitFeature Name="{40556131-a2a1-5fab-aaee-5f35268ca26b}" />
+          <AitFeature Name="{40612a44-47ae-4b7e-9124-69628b64aa18}" />
+          <AitFeature Name="{40e7e72d-cbab-588b-a227-9e60532f0121}" />
+          <AitFeature Name="{410b7711-ff3b-477f-9c9a-d2efda302dc3}" />
+          <AitFeature Name="{41f752ef-12af-41b9-ab36-b1eb4b512460}" />
+          <AitFeature Name="{4207a996-ca2f-42f7-bde8-8b10457a7f30}" />
+          <AitFeature Name="{421d4b91-b13b-5f37-ae54-b5249bd80539}" />
+          <AitFeature Name="{4296b6e8-e219-5e74-8dde-196f57200a82}" />
+          <AitFeature Name="{42e26ae1-d357-57e8-bb48-f75c9ff69d91}" />
+          <AitFeature Name="{430ecece-1418-5d19-81b2-5ddb381603cc}" />
+          <AitFeature Name="{433ba1a4-e1e2-48fd-b7fc-b5d6eee65033}" />
+          <AitFeature Name="{43929d18-5ec9-4b5a-919c-4205b0c804b6}" />
+          <AitFeature Name="{43e29f53-0298-55aa-a6c8-4edd323d9598}" />
+          <AitFeature Name="{44a94f2d-04f8-5091-b336-be7892dd10be}" />
+          <AitFeature Name="{44a9796f-723e-4fdf-a218-033e75b0c084}" />
+          <AitFeature Name="{45206a4c-0a4e-4fbf-aee9-335d5a205f6e}" />
+          <AitFeature Name="{455aa601-f13e-5dee-b9cb-16b531996327}" />
+          <AitFeature Name="{47bd7ff2-5295-57bb-9212-2b0b8692aa13}" />
+          <AitFeature Name="{4825d6c4-835a-5da1-9bdd-12e97e16fb7a}" />
+          <AitFeature Name="{4a47bb13-0531-5b4d-b0b4-038465121b55}" />
+          <AitFeature Name="{4b3a3229-7995-5f3c-b248-6c1f7e664f01}" />
+          <AitFeature Name="{4bd1d625-221a-477e-bb2c-ad0c1ed125e7}" />
+          <AitFeature Name="{4bd682dd-7554-40e9-9a9b-82654ede7e62}" />
+          <AitFeature Name="{4bdaf9c8-cdb2-4acb-bfc3-6648563378ec}" />
+          <AitFeature Name="{4cf68d33-e3f2-4964-b85e-945b4f7e2f21}" />
+          <AitFeature Name="{4d239005-3c2a-41b1-9022-536bb9cf93b1}" />
+          <AitFeature Name="{4dab4671-12b2-43c7-b892-9be2dcd3e88d}" />
+          <AitFeature Name="{4dd04f7d-7a11-4b2e-9933-577df39252b6}" />
+          <AitFeature Name="{4dd04f7e-7a11-4b2e-9933-577df39252b6}" />
+          <AitFeature Name="{4dd04f7f-7a11-4b2e-9933-577df39252b6}" />
+          <AitFeature Name="{4dda9e24-e69f-5c6a-a0a6-93427365af2a}" />
+          <AitFeature Name="{4deecc89-b0b8-5ee8-a51d-1c25ad9a5b01}" />
+          <AitFeature Name="{4e534bdf-2960-4878-97a4-9624deb72f2d}" />
+          <AitFeature Name="{4edb8ee2-96dd-49a7-94f7-4607ddab8e3c}" />
+          <AitFeature Name="{4f016541-bcfe-4a22-8932-c914981c2240}" />
+          <AitFeature Name="{4f33a9a0-5cf4-47a4-b16f-d7faaf17457e}" />
+          <AitFeature Name="{4f5f6944-264b-5868-809e-c7ac1ac5edad}" />
+          <AitFeature Name="{500f32db-89c9-55b8-845a-c94976c058f2}" />
+          <AitFeature Name="{5074f851-950d-4165-9c15-365619481eea}" />
+          <AitFeature Name="{50850b26-267e-451b-a890-ab6a370245ee}" />
+          <AitFeature Name="{50f19c16-0a22-4d8e-a089-1ea9951657d2}" />
+          <AitFeature Name="{513ef3af-e784-5325-a91e-97c2b8111cf3}" />
+          <AitFeature Name="{5186131a-4467-504b-977a-0785a8230485}" />
+          <AitFeature Name="{518dc408-c077-475b-809e-0bc0c57e4b74}" />
+          <AitFeature Name="{51ed9d7e-2b53-475b-9c88-0c1832c8351a}" />
+          <AitFeature Name="{53425270-77b4-426b-859f-81e19d512546}" />
+          <AitFeature Name="{534832ed-2a03-5604-890d-5a928cd427b9}" />
+          <AitFeature Name="{53c9f23a-f25d-446a-99b8-c7aeb839050f}" />
+          <AitFeature Name="{53f926d2-083c-4283-b45b-81c007237e44}" />
+          <AitFeature Name="{5407b704-8147-4343-838f-dd1ee908c137}" />
+          <AitFeature Name="{5409069f-e7c1-5732-bb69-e5736f03f9a9}" />
+          <AitFeature Name="{541c8d6c-0283-4581-b945-2a64c28a0646}" />
+          <AitFeature Name="{542f9937-560b-524f-b055-bb7e46d31de0}" />
+          <AitFeature Name="{548cefbd-bc8a-5fa0-8df2-957440fc8bf4}" />
+          <AitFeature Name="{54a69651-5f6c-5c2f-a456-5ea9f3b6f001}" />
+          <AitFeature Name="{54dfd981-1968-4ca3-b958-e595d16505eb}" />
+          <AitFeature Name="{5541d8a7-497c-5aa4-86fc-7713adbf2a2c}" />
+          <AitFeature Name="{557bf83c-a428-5dbd-a0fe-05f6ee543d45}" />
+          <AitFeature Name="{5612147b-e843-45e3-94d8-06169e3c8e17}" />
+          <AitFeature Name="{5738fc25-402b-5fc1-b1e4-0aa24ef652f1}" />
+          <AitFeature Name="{575933df-34fe-4480-af15-07691f3d5d9b}" />
+          <AitFeature Name="{59140509-8bc9-4eb4-b636-dabdc4f46f66}" />
+          <AitFeature Name="{594ebe78-55ea-4a88-a50d-3402ae1f9cf2}" />
+          <AitFeature Name="{59e7ae0c-c29d-5ad6-bef5-dedb52a198e1}" />
+          <AitFeature Name="{5a200ec7-0426-47dc-b86c-6f475915e451}" />
+          <AitFeature Name="{5a648006-843a-4da9-865b-9d26e5dfad7b}" />
+          <AitFeature Name="{5ab7d2c3-6b62-5e71-a4b6-2d49c4f238fd}" />
+          <AitFeature Name="{5b082a31-a728-4916-b5ee-ffcb8acf2417}" />
+          <AitFeature Name="{5bac994e-3886-412e-aec3-52ec7f25616f}" />
+          <AitFeature Name="{5c21c742-2ced-4fd9-ba38-7118d40e966b}" />
+          <AitFeature Name="{5c526665-f60e-4912-af59-5fe0680f089d}" />
+          <AitFeature Name="{5c985ac6-d802-4b38-a223-bf070c43fedf}" />
+          <AitFeature Name="{5cc5b382-e6dd-4991-abef-06d8d2e7bd0c}" />
+          <AitFeature Name="{5d144364-77d7-5eca-8b09-936a69446652}" />
+          <AitFeature Name="{5db1aa05-9f80-48b6-ae6c-4f119de8ff13}" />
+          <AitFeature Name="{5db5fa32-707c-5849-a06b-91c8eb9d10e8}" />
+          <AitFeature Name="{5e52f8ce-aced-5a42-95b4-f674dd84885e}" />
+          <AitFeature Name="{5f4c0b10-e38e-4b5d-be1a-5ed04246a635}" />
+          <AitFeature Name="{5f6b544a-2f53-48e1-91a3-f78b50a6345c}" />
+          <AitFeature Name="{5fc9c137-ebb7-5e6c-9cba-686f2ec2b0bb}" />
+          <AitFeature Name="{60141efb-f2f9-5377-96fd-f8c60d9558b5}" />
+          <AitFeature Name="{60310303-49c5-52e6-abc6-a9b36eccc716}" />
+          <AitFeature Name="{604d0c4c-91de-5c2a-935f-362f13eaf800}" />
+          <AitFeature Name="{608d2f1d-7858-4aeb-89e4-b54e2c7ed3d3}" />
+          <AitFeature Name="{60cdfda2-2f44-444b-9c94-b8c9fda46f59}" />
+          <AitFeature Name="{60db2fa8-b705-4fde-a7d6-ebbb1891d39e}" />
+          <AitFeature Name="{61723086-8e53-5276-9f36-2a4bb93e2b75}" />
+          <AitFeature Name="{6180171d-2ed8-5e24-8a55-01ecb1009eb2}" />
+          <AitFeature Name="{638bb2db-451d-4661-b099-414f34ffb9f1}" />
+          <AitFeature Name="{63d8248a-8b34-445a-808f-b6ecd62a27d9}" />
+          <AitFeature Name="{63dbba8b-d0db-4fe1-b745-f9433afdc25b}" />
+          <AitFeature Name="{64002b4b-ede9-470a-a5cd-0323faf6e262}" />
+          <AitFeature Name="{64bd43f8-bfee-4ec4-b7eb-2935158dae21}" />
+          <AitFeature Name="{64e9be00-4dc1-493d-abe7-cbd3c577490d}" />
+          <AitFeature Name="{64e9be10-4dd1-494d-abf7-cbd3c577491d}" />
+          <AitFeature Name="{652c208c-8ccf-4399-bd3e-5a015aa1bc03}" />
+          <AitFeature Name="{6588d2a6-3972-5247-a870-e217b76de89c}" />
+          <AitFeature Name="{6624a2dd-83f7-519c-9d55-bb1f6560456b}" />
+          <AitFeature Name="{6755e376-53bb-568b-a11d-17239868309e}" />
+          <AitFeature Name="{676d0be9-b65c-41c6-ba40-58cf87f201c1}" />
+          <AitFeature Name="{676d0bf9-b66c-41d6-ba50-58cf87f201d1}" />
+          <AitFeature Name="{676fc159-f15c-58bd-91a7-28f7e795c756}" />
+          <AitFeature Name="{679ab78b-b336-4822-ac40-0d750f0b7a2b}" />
+          <AitFeature Name="{67f9e5c8-a3bc-5539-a502-c0bdbed2c619}" />
+          <AitFeature Name="{6834869d-7bd5-4033-b237-172f79abe393}" />
+          <AitFeature Name="{687a15ce-ae58-5e19-974e-34f17d92b941}" />
+          <AitFeature Name="{68d940cc-9ff0-49ce-b141-3f07ec477b97}" />
+          <AitFeature Name="{68e0e810-f6ea-42bc-855b-5d9b67e6a262}" />
+          <AitFeature Name="{68e4606a-76ec-5816-b2fe-a04ecde4126a}" />
+          <AitFeature Name="{68ea500b-3fe9-4735-b6a0-e7601933b089}" />
+          <AitFeature Name="{68eb7adf-917f-48eb-9aeb-7de53e086ab1}" />
+          <AitFeature Name="{69f90679-3a11-4fe7-b4df-2a0139d4018b}" />
+          <AitFeature Name="{6a1d6c07-076d-49f2-8314-f52c9c9a8331}" />
+          <AitFeature Name="{6a8dc48a-64f1-5661-8e14-8001bf3f626c}" />
+          <AitFeature Name="{6ab18989-c720-41a7-a6c1-feadb36329a0}" />
+          <AitFeature Name="{6ab1ea83-cb41-5f99-92cc-23bd4336a1fb}" />
+          <AitFeature Name="{6b14a441-fba7-4bd2-af0a-839de7c295da}" />
+          <AitFeature Name="{6b5e0516-de96-4f0a-8d57-dcc9dae36c76}" />
+          <AitFeature Name="{6bb6d2f1-b5fb-57f0-8251-f20cde5a6871}" />
+          <AitFeature Name="{6be9e7d7-e83a-5cbc-802c-1768960b52c3}" />
+          <AitFeature Name="{6c3fb5fc-8e84-4c91-ac15-04a1d885500f}" />
+          <AitFeature Name="{6cd0e74e-ee65-4489-9ebf-ca43e87ba637}" />
+          <AitFeature Name="{6d05fb29-7885-544e-9382-a1ad391a3fa4}" />
+          <AitFeature Name="{6d743fc9-76a7-5dbb-97d1-3f94b00349cd}" />
+          <AitFeature Name="{6dcc9c03-e0c7-4eee-8ea9-37e3406eeb1c}" />
+          <AitFeature Name="{6dda119e-9a74-478f-a339-5bb52de6c51e}" />
+          <AitFeature Name="{6e333271-2e2a-5955-8790-836c76ee53b6}" />
+          <AitFeature Name="{6ec9e41b-6709-5647-9918-a1270110fc4e}" />
+          <AitFeature Name="{704b4ec9-0373-506c-8af3-57e9245f1c4e}" />
+          <AitFeature Name="{710e4278-8529-47d3-8d8e-307e34cff081}" />
+          <AitFeature Name="{719cc2ba-3e76-5def-9f1a-38d85a145ea8}" />
+          <AitFeature Name="{71ba143c-598e-49d0-84eb-8febaedcc195}" />
+          <AitFeature Name="{71c89b09-e131-4b54-a53c-eb43ff37e9bb}" />
+          <AitFeature Name="{71ca300b-b89e-4184-b0df-a9e95447de8d}" />
+          <AitFeature Name="{71cf215c-daed-4783-aa11-dc574d2713e9}" />
+          <AitFeature Name="{72284824-db8c-42f8-b08c-53ff357dad82}" />
+          <AitFeature Name="{7230269c-054e-4cf3-86c5-be90eb6863d5}" />
+          <AitFeature Name="{72827082-5525-4bf2-bc09-1f5095d4964d}" />
+          <AitFeature Name="{728d4022-700d-4fe0-afa5-40299c58dbfd}" />
+          <AitFeature Name="{72d1cb78-b3ef-4f75-a80b-6fd9dae2944b}" />
+          <AitFeature Name="{72ff2923-4b4e-53bb-8feb-41ec5f2bb734}" />
+          <AitFeature Name="{737ef309-ea41-4d96-a71c-98e98efcab07}" />
+          <AitFeature Name="{740a0296-a535-572a-bf0b-17c18ff71fe6}" />
+          <AitFeature Name="{74b861a1-7487-46a9-9a6e-c78b512726c5}" />
+          <AitFeature Name="{751b792e-5772-4488-8b87-f547faa64474}" />
+          <AitFeature Name="{754c3266-0529-45e3-8748-bf747d158357}" />
+          <AitFeature Name="{758d9661-221c-480f-a339-50656673f46f}" />
+          <AitFeature Name="{75d6a78f-a302-4489-9898-24ea49182910}" />
+          <AitFeature Name="{76d43c7e-fd09-5908-a2b9-a49b4848294b}" />
+          <AitFeature Name="{7784427e-f9cc-518d-964b-e50d5ce727f1}" />
+          <AitFeature Name="{7920eab1-a2e5-479a-bd50-6cef3c0b4970}" />
+          <AitFeature Name="{79b9d5f2-879e-4b89-b798-79e47598030c}" />
+          <AitFeature Name="{7a4774c9-a6a3-4b30-8ff1-9081d70e9a5c}" />
+          <AitFeature Name="{7a990969-fa3f-41ed-aac6-bf957975c16b}" />
+          <AitFeature Name="{7b81c56a-0985-518d-baa9-0da9ae009f65}" />
+          <AitFeature Name="{7bd1cf54-23cf-4cce-b2f5-4ce78d96896e}" />
+          <AitFeature Name="{7bd35ddf-5cd9-5fb5-8ef8-25e9f3fe1a5f}" />
+          <AitFeature Name="{7c63d2e5-7a0e-4e12-b96a-7715aa6ff1c8}" />
+          <AitFeature Name="{7c925755-3e48-42b4-8677-76372267033f}" />
+          <AitFeature Name="{7d50f649-632c-51f9-849a-ee49428933ea}" />
+          <AitFeature Name="{7d7daf45-368d-4364-852b-dec927037b85}" />
+          <AitFeature Name="{7da68e21-0b8f-4f9f-a143-f8e7780136a2}" />
+          <AitFeature Name="{7f5ee992-7694-4e6c-a51b-e34bf43de743}" />
+          <AitFeature Name="{7f67a4e2-96e0-522b-8710-14c42d834f1e}" />
+          <AitFeature Name="{7fdcc3d7-e13e-5f76-afc6-0769c4086399}" />
+          <AitFeature Name="{80423f11-054f-5eac-afd3-63b6ce15e77b}" />
+          <AitFeature Name="{80646519-5e2a-595d-a8cd-2a24b4067f1b}" />
+          <AitFeature Name="{80653f68-2cb2-4c1f-b590-f0f52bf4fd1a}" />
+          <AitFeature Name="{80a13c19-843a-451c-8cf5-44c701b0e216}" />
+          <AitFeature Name="{811d834c-a15e-5522-b7f4-e53004fc58ff}" />
+          <AitFeature Name="{81212c2b-24d0-4957-abc3-224470a93a4e}" />
+          <AitFeature Name="{81a643fb-f51c-5565-83c4-f96425777b66}" />
+          <AitFeature Name="{81c19cf1-74e6-4387-82eb-bb8fd64b4346}" />
+          <AitFeature Name="{8221aa0e-d1d2-5b22-a918-05672812d12f}" />
+          <AitFeature Name="{828e1e36-e9e3-4cfc-9b66-48b78ea9bb2c}" />
+          <AitFeature Name="{82ba7092-4c88-427d-a7bc-16dd93feb67e}" />
+          <AitFeature Name="{848e45c7-2fbb-5d59-a35f-0b4e88349103}" />
+          <AitFeature Name="{84f14c22-a00a-5272-8d3d-82112e66df00}" />
+          <AitFeature Name="{85575a41-06cb-58d0-b98a-7c8f06e6e9d7}" />
+          <AitFeature Name="{861bf39b-6368-4dee-b40e-74684a5ce714}" />
+          <AitFeature Name="{86664478-8029-46fe-a789-1c2f3e2ffb5c}" />
+          <AitFeature Name="{876be83b-7218-5bfb-a169-83152ef7e146}" />
+          <AitFeature Name="{8806a321-1e06-422c-a1cc-01696559e021}" />
+          <AitFeature Name="{88318266-f3fd-50fc-8f08-b823a41b60c1}" />
+          <AitFeature Name="{8941767c-dab6-51e5-a22f-dd3c1e4e8f87}" />
+          <AitFeature Name="{8a43ed9f-f4e6-4421-acf9-1dab2986820c}" />
+          <AitFeature Name="{8a444256-d661-5e9a-a72b-d8f1d7962d0c}" />
+          <AitFeature Name="{8c304ebb-6615-50a4-8829-879ecd443236}" />
+          <AitFeature Name="{8cb36951-58c8-43e3-94bc-41d33f8b630e}" />
+          <AitFeature Name="{8d720cdf-3934-5d3f-9a55-40e8063b086a}" />
+          <AitFeature Name="{8db69706-3dd1-5a28-986a-93be0776d9c3}" />
+          <AitFeature Name="{8e86a951-04b9-4bd2-929d-fef3f71621d0}" />
+          <AitFeature Name="{8eb35b97-ad87-40e8-818b-77db24759566}" />
+          <AitFeature Name="{8fffe867-d94c-4e87-8fc4-6ebcd63c5ac2}" />
+          <AitFeature Name="{905a0fe0-bc53-11df-8c49-001e4fc686da}" />
+          <AitFeature Name="{905a0fe1-bc53-11df-8c49-001e4fc686da}" />
+          <AitFeature Name="{905a0fe2-bc53-11df-8c49-001e4fc686da}" />
+          <AitFeature Name="{905a0fe6-bc53-11df-8c49-001e4fc686da}" />
+          <AitFeature Name="{912f8fd7-adc0-5d60-a896-7ed76089cc5b}" />
+          <AitFeature Name="{92467e64-d66a-4cf4-9322-3d23b3c0c361}" />
+          <AitFeature Name="{9274e6bd-49a1-4958-beee-d0e19587b6e3}" />
+          <AitFeature Name="{92c3102f-a327-5318-a6c1-76f6b2a0abfb}" />
+          <AitFeature Name="{930cef4b-b829-40fc-88f4-8513e8a64738}" />
+          <AitFeature Name="{93328409-4ea1-4afa-83dc-0c4e73e88bb1}" />
+          <AitFeature Name="{93bbe361-be5a-4ee3-b4a3-95118dc97a89}" />
+          <AitFeature Name="{94ea2b94-e9cc-49e0-c0ff-ee64ca8f5b90}" />
+          <AitFeature Name="{95c66258-733b-4a8f-93a3-db078ac870c1}" />
+          <AitFeature Name="{96061c05-2dba-4d08-b0bd-2b30a131c6aa}" />
+          <AitFeature Name="{96369f54-8eb6-48f0-abce-c1b211e627c3}" />
+          <AitFeature Name="{963f7013-77c2-51c5-8038-b5bcef633edb}" />
+          <AitFeature Name="{96d922e6-a7ca-5c21-b9f7-e4504e8c7112}" />
+          <AitFeature Name="{971260e0-f170-4a42-bd55-a900b212dae2}" />
+          <AitFeature Name="{97374b68-eb87-56cc-b18e-27ef0f9cfc0c}" />
+          <AitFeature Name="{98b9acc1-4b56-532e-ac73-03d5291cca90}" />
+          <AitFeature Name="{9910aec7-8ab5-4118-9bc6-09f45a35073d}" />
+          <AitFeature Name="{993fd6d2-2aae-4f3b-b44d-5648f4d06114}" />
+          <AitFeature Name="{9a16e097-f2e7-5bdc-b9f6-5a3f96ad3b59}" />
+          <AitFeature Name="{9ac00304-83ea-5688-87b6-ae38aab65d0b}" />
+          <AitFeature Name="{9af0803b-d04c-467a-bbd5-9b81f02d9a56}" />
+          <AitFeature Name="{9b0252ac-0c27-44f8-b792-9793fb66c63e}" />
+          <AitFeature Name="{9b26648e-b32f-5909-a635-78e6d3bb4067}" />
+          <AitFeature Name="{9c314242-f29a-494d-a3a5-d4c7b2a46852}" />
+          <AitFeature Name="{9cd7a84f-0c80-59c5-b44e-977841bb43d9}" />
+          <AitFeature Name="{9da4ca41-20e1-4e9b-9f65-a9f435340c3a}" />
+          <AitFeature Name="{9e365e57-48b2-4160-956f-c7385120bbfc}" />
+          <AitFeature Name="{9e5f3ed0-cf1c-5d38-832c-acea6164bf5c}" />
+          <AitFeature Name="{9e65cd69-0ba3-4e32-be29-b02de6607638}" />
+          <AitFeature Name="{9fac9741-5cc4-4336-ae38-6212b75a915a}" />
+          <AitFeature Name="{9fd11377-c12a-4493-bf7d-f3a8ad74b554}" />
+          <AitFeature Name="{9ffdf7f5-b8c9-4ef0-b7d2-1de626561fc8}" />
+          <AitFeature Name="{a09691df-9824-41fe-b530-b0d8990e64c1}" />
+          <AitFeature Name="{a099e6be-e624-459a-bb1d-e05c73e2cc66}" />
+          <AitFeature Name="{a19f7ba8-d8cd-5df2-ab44-fefd26644484}" />
+          <AitFeature Name="{a1e254d8-a446-4a27-9a9d-a0f59e1258a5}" />
+          <AitFeature Name="{a26dd1dc-cd44-435c-be94-01d6241c231c}" />
+          <AitFeature Name="{a3219ecb-f0b3-4dcd-beee-19d48cd3ed1e}" />
+          <AitFeature Name="{a391d09b-4a99-4b7c-9d8d-6fa5d01f6fbf}" />
+          <AitFeature Name="{a4095aab-eb7d-5782-8fad-1609dea249ad}" />
+          <AitFeature Name="{a4cb6dd5-0902-439e-bfd7-e12552b165ce}" />
+          <AitFeature Name="{a4ed5c81-76c9-40bd-8be6-b1d90fb20ae7}" />
+          <AitFeature Name="{a50a4bbd-8361-469c-90da-e9a40c7474df}" />
+          <AitFeature Name="{a55a825e-e87d-54f1-ae28-389a0238d9e1}" />
+          <AitFeature Name="{a6487363-b074-5c60-ab16-866dce4ee54d}" />
+          <AitFeature Name="{a6612fb6-7688-4ace-95fb-359538e7aa01}" />
+          <AitFeature Name="{a6d080a5-b087-5bc2-9a9f-5cd687b4d1f7}" />
+          <AitFeature Name="{a76a3b63-229b-4dc5-aa11-9d922fbf8a98}" />
+          <AitFeature Name="{a7a69ec9-ea35-4679-bf29-f4f09286d314}" />
+          <AitFeature Name="{a856e674-b0b6-4bc3-bba8-1ba06e40d4b5}" />
+          <AitFeature Name="{a8912263-2951-4f58-a9c5-5a134eaa7f07}" />
+          <AitFeature Name="{a8d8a409-9130-5e14-8426-0782aaf01608}" />
+          <AitFeature Name="{a907d496-46a0-4cd7-8dbe-f9a581df60b1}" />
+          <AitFeature Name="{a9b18291-ce2a-5dae-8a23-b7f7388416db}" />
+          <AitFeature Name="{aa1160cb-dfb9-4c56-abdc-711b63c8eb94}" />
+          <AitFeature Name="{ab8e5d11-b0c1-5a21-95ae-f16bf3a37624}" />
+          <AitFeature Name="{ab95e70d-a760-52f2-adea-da767237eda3}" />
+          <AitFeature Name="{ac0d0444-a65b-4abd-86df-3016049efedc}" />
+          <AitFeature Name="{ac7f26f2-feb7-5b2a-8ac4-345bc62caede}" />
+          <AitFeature Name="{ac96ded7-0d64-5d69-ab7a-2574b02735b9}" />
+          <AitFeature Name="{ad73197d-2cfa-57a6-8993-9fac40feb791}" />
+          <AitFeature Name="{ae2d9271-3b4a-45fc-8468-f7949548f4d5}" />
+          <AitFeature Name="{ae44597e-d411-5b7f-bbec-6a96c94a107a}" />
+          <AitFeature Name="{ae814041-c531-43b4-bf99-12f506f7b01c}" />
+          <AitFeature Name="{aed792e1-3c65-50d8-ba76-01c8b6b65a33}" />
+          <AitFeature Name="{af40329b-b544-469b-86b9-ac3d466fea36}" />
+          <AitFeature Name="{af404424-26df-44f4-8714-9359249b62d3}" />
+          <AitFeature Name="{af5207d9-c433-4764-b3fd-8fa6bfbcbadc}" />
+          <AitFeature Name="{af86e2e0-b12d-4c6a-9c5a-d7aa65101e90}" />
+          <AitFeature Name="{afcbbe9b-582b-4133-9648-e44ca46ee491}" />
+          <AitFeature Name="{b01c8a21-de6f-5edd-8796-300e3fe66382}" />
+          <AitFeature Name="{b1f00d3b-1f06-5117-93ea-2a0d79116701}" />
+          <AitFeature Name="{b30c3e3a-df8d-44a5-9a38-7ac0d08ce63d}" />
+          <AitFeature Name="{b32bdca4-5e52-5b27-bc5d-d66a1a268c2a}" />
+          <AitFeature Name="{b34952ac-265e-5947-8735-e9318f4301ff}" />
+          <AitFeature Name="{b3765d69-68a5-4b32-8861-fdb90c1f5836}" />
+          <AitFeature Name="{b3c32a3d-d168-4660-bbf3-a733b14b6e01}" />
+          <AitFeature Name="{b423a801-d35e-56b9-813b-00889536cb98}" />
+          <AitFeature Name="{b440c7c3-02b4-4980-9342-25dae1c0f188}" />
+          <AitFeature Name="{b4c1e3ac-8768-5b9d-a661-f63330b8507b}" />
+          <AitFeature Name="{b56a6076-19e2-50c1-930f-825bfc39635c}" />
+          <AitFeature Name="{b5ad9b23-2f41-498e-8319-015ee8a75346}" />
+          <AitFeature Name="{b5ecd72b-991b-5ec7-bacc-7ccd6bebe331}" />
+          <AitFeature Name="{b6351c55-c284-46e4-8310-fb0967fab76f}" />
+          <AitFeature Name="{b6aa9834-6691-44d1-bdf7-58820c27b0d0}" />
+          <AitFeature Name="{b6bf67dd-84bd-44f8-ac1c-93ebcb9dba91}" />
+          <AitFeature Name="{b7bb4305-3dd9-43de-a8c0-c472f085bc11}" />
+          <AitFeature Name="{b8ae8fe2-d641-4fd7-80b4-7439207d2798}" />
+          <AitFeature Name="{b939af5b-b45d-5489-9149-61442c1905fe}" />
+          <AitFeature Name="{b9a8d05c-ac97-47f1-a5f4-3f9f4d4b116c}" />
+          <AitFeature Name="{bafaecad-484d-41be-ba80-1d58c65263ea}" />
+          <AitFeature Name="{bb2afc33-93b1-42ed-8b26-236dd9c78496}" />
+          <AitFeature Name="{bb3c25e5-46cf-4317-a3f5-02621ad54478}" />
+          <AitFeature Name="{bb78502a-f79d-54fa-92c9-90c5039fdf7e}" />
+          <AitFeature Name="{bb8b8418-65d1-544b-b083-6d172f568c73}" />
+          <AitFeature Name="{bd4b0143-3a22-5ee2-92ed-7bc3c129e52b}" />
+          <AitFeature Name="{bdff696d-3f22-41f9-97a6-883134a76113}" />
+          <AitFeature Name="{be9b3080-b2c3-422b-bce1-ec90efb5d7b5}" />
+          <AitFeature Name="{bea93e67-dbee-4f7b-af0d-a79aae5333bf}" />
+          <AitFeature Name="{beadb572-f9a3-5e93-b6ca-e311b65933fc}" />
+          <AitFeature Name="{bed112ae-adc3-4dc9-ae65-851f4d7d4799}" />
+          <AitFeature Name="{bf16482e-80ed-51f0-b9c9-3a804e2d6403}" />
+          <AitFeature Name="{bf2195a9-f4ea-4336-977c-f8fcf78b0d9e}" />
+          <AitFeature Name="{bf666554-7605-5d9a-b14e-18d8c8472afe}" />
+          <AitFeature Name="{bf8ecaad-ed96-49a7-9084-d416cae88dcb}" />
+          <AitFeature Name="{bf9918ea-d801-4564-a495-b1e84f8ad085}" />
+          <AitFeature Name="{bfea7f78-50c2-5f1d-a6ea-9e978d2699ff}" />
+          <AitFeature Name="{c09f33da-08ab-4931-9b7c-451025f21f81}" />
+          <AitFeature Name="{c192280d-3a09-5423-9dc5-67b83ebde41d}" />
+          <AitFeature Name="{c19bf229-815a-5cbd-a506-e31f9b67e317}" />
+          <AitFeature Name="{c1d3d1a2-ae17-5a5f-b5a2-bdcc8844889a}" />
+          <AitFeature Name="{c1d432ba-c824-4452-a7fd-512bc3bbe9a1}" />
+          <AitFeature Name="{c201cf06-cd84-48a5-9607-664d7361cd61}" />
+          <AitFeature Name="{c211026e-9e63-5452-ba54-3a07d6a96874}" />
+          <AitFeature Name="{c246ff23-d80d-44de-8db9-0d815e269ac0}" />
+          <AitFeature Name="{c3c5bea8-6d48-54e6-8aa9-4346b3f043e9}" />
+          <AitFeature Name="{c3da6fb7-b744-4b45-b0b8-223a0938d0dc}" />
+          <AitFeature Name="{c473ed96-76e3-5ff2-9435-47feebfe9539}" />
+          <AitFeature Name="{c4a9f225-9db7-4a7d-b6d1-f74edb9293c2}" />
+          <AitFeature Name="{c4b27075-e641-453e-824d-012fc7cf95cf}" />
+          <AitFeature Name="{c50898f6-c536-5f47-8583-8b2c2438a13b}" />
+          <AitFeature Name="{c541f58c-43a9-4216-b718-e0b11b14e93e}" />
+          <AitFeature Name="{c54361b2-54cd-432b-bdbc-4b19c4b470d7}" />
+          <AitFeature Name="{c5aefd1e-f467-40ba-8566-ab640a441e1d}" />
+          <AitFeature Name="{c5d217e3-a987-583c-8253-74c40204c523}" />
+          <AitFeature Name="{c602b59e-0a8e-5e99-b478-2b564585278d}" />
+          <AitFeature Name="{c61b9bdd-2933-5773-a463-e81354dc0e26}" />
+          <AitFeature Name="{c6a02a6c-d452-44dc-ba07-96f3c6adf9d1}" />
+          <AitFeature Name="{c7090977-7eb4-582c-930e-17897ae40b41}" />
+          <AitFeature Name="{c77e1cb4-3cea-4eb5-ac85-04e186e63ab7}" />
+          <AitFeature Name="{c788089d-37ab-5ba2-b865-5a309acdfc4d}" />
+          <AitFeature Name="{c79bb41b-a084-4301-a496-72971f364ed1}" />
+          <AitFeature Name="{c8659aae-4926-52ad-8f60-d89fe5a8df5f}" />
+          <AitFeature Name="{c972d2dc-b609-4758-851e-a799c21de97d}" />
+          <AitFeature Name="{c9d9a725-786b-5113-b4b7-9b61764c220b}" />
+          <AitFeature Name="{ca10b37c-f382-4591-8557-5e24965279b0}" />
+          <AitFeature Name="{ca30221d-86d9-40fb-a26b-d44eb7cf08ea}" />
+          <AitFeature Name="{ca817e77-a704-5ace-8e86-763cecb0d72e}" />
+          <AitFeature Name="{cb0492b6-4113-55cf-b2c5-99eb428ba493}" />
+          <AitFeature Name="{cb4206c5-0988-5104-afa9-253c298f86fd}" />
+          <AitFeature Name="{cb43ccc9-446b-4a4f-be97-757771be5203}" />
+          <AitFeature Name="{cb5cd2b9-e3b4-458c-b64e-1434fd1bd88a}" />
+          <AitFeature Name="{cce5a798-d269-5fce-99ce-ef0ae3cd0569}" />
+          <AitFeature Name="{cd332ddd-c611-5d09-9823-0ddd6eb15f7b}" />
+          <AitFeature Name="{cd770614-65c4-426c-9494-34fc43554862}" />
+          <AitFeature Name="{cdb5efb3-5788-509d-9be1-71ccb8a3362a}" />
+          <AitFeature Name="{cf193a96-eb13-5e3b-8bdf-87b6efae8339}" />
+          <AitFeature Name="{cf4a637f-456a-5a47-a927-bcf07fc69901}" />
+          <AitFeature Name="{cf651713-cd08-4fd8-b697-a281b6544e2e}" />
+          <AitFeature Name="{cf75d69c-f2f4-486b-b302-bb4c09baebfa}" />
+          <AitFeature Name="{cf86461d-261e-4b72-9acd-44ed2ace6a29}" />
+          <AitFeature Name="{cffabb0f-6bc4-5ff6-9b9e-7a9df6c687c8}" />
+          <AitFeature Name="{d01fb083-5e61-5c12-a18f-62947158faa8}" />
+          <AitFeature Name="{d05d55db-785e-4a66-be02-9beec58aea81}" />
+          <AitFeature Name="{d06eb1c7-3805-4ecb-b757-6cf15e26fef3}" />
+          <AitFeature Name="{d1113f67-d8c1-4ae4-98f0-d8504502f08b}" />
+          <AitFeature Name="{d160ce46-cd22-4f5f-8c97-40e61da3e2dc}" />
+          <AitFeature Name="{d1c2a4f7-78a3-4491-86e0-2ddebc007ac5}" />
+          <AitFeature Name="{d1f276c4-98d8-4636-bf49-eb79507548e9}" />
+          <AitFeature Name="{d26b2819-897f-5c7d-84d6-56d796561431}" />
+          <AitFeature Name="{d301f253-e0a3-5d2b-9a41-a4d62bec4623}" />
+          <AitFeature Name="{d39d6322-7c9c-481b-827b-c8b2d9bb6fc7}" />
+          <AitFeature Name="{d44662bc-dce3-59a8-9272-4b210f33908b}" />
+          <AitFeature Name="{d45a0451-f225-4542-9296-0e1df5d254df}" />
+          <AitFeature Name="{d4cd3dfe-4079-42e9-a39a-3095d3f049c6}" />
+          <AitFeature Name="{d5312e60-5cc1-42a1-920c-1af46be2f986}" />
+          <AitFeature Name="{d56db359-6f77-4296-ab9c-794939444365}" />
+          <AitFeature Name="{d6602d54-88f6-43f6-85d8-a9d914a6dd3b}" />
+          <AitFeature Name="{d960d2a2-b7f0-4f00-8e44-d82cf415ea13}" />
+          <AitFeature Name="{da007e54-b3c2-4b9a-aa8e-d3f071262b97}" />
+          <AitFeature Name="{da628f0a-9752-49e2-bde2-49eccab9194d}" />
+          <AitFeature Name="{dbff71d9-979a-4b2e-a49b-3bb17fdef574}" />
+          <AitFeature Name="{dd9ff16a-4b62-4a6c-a49d-0671ef6136be}" />
+          <AitFeature Name="{de9e16c4-1b7c-5126-b1d8-7cd04f13bd08}" />
+          <AitFeature Name="{df945151-745c-4446-b2fc-216d765847a0}" />
+          <AitFeature Name="{dfa149ac-1849-445e-937c-40a9590cc076}" />
+          <AitFeature Name="{dfabb6e1-0411-5a8f-aa87-354e7110f099}" />
+          <AitFeature Name="{e0c06ef2-dbc9-511c-bab6-25756dd516a3}" />
+          <AitFeature Name="{e1a05352-5aa0-42ca-9cd9-068a14db6e68}" />
+          <AitFeature Name="{e2045145-4c9f-400c-9150-7ec7d6e2888a}" />
+          <AitFeature Name="{e2663f37-2e1b-500c-ad68-c3ed7a8f74c8}" />
+          <AitFeature Name="{e2b50029-b4c1-4314-a4b8-fb813a2f275e}" />
+          <AitFeature Name="{e2fcc7c1-3bfc-5a0b-b2b0-72e769d1cb7e}" />
+          <AitFeature Name="{e30eb3a5-b36b-42dc-8527-cd25136c083c}" />
+          <AitFeature Name="{e33644c8-e0e0-5645-8722-60066c85873c}" />
+          <AitFeature Name="{e4385929-c004-4bcf-8970-359486e39f88}" />
+          <AitFeature Name="{e48f5a8b-1dff-4352-a1f4-e516514ec882}" />
+          <AitFeature Name="{e5198cc8-2873-55f5-b0a1-84ff9e4aad62}" />
+          <AitFeature Name="{e521c894-2c26-5946-9e61-2b5e188d01ed}" />
+          <AitFeature Name="{e53056ad-8a0e-5c41-a62d-c92e3ac2de58}" />
+          <AitFeature Name="{e5af3542-ca67-4081-995b-709dd13792df}" />
+          <AitFeature Name="{e5ce1a07-8d33-5007-ba64-7d2508ccf85c}" />
+          <AitFeature Name="{e609698d-6aab-5adc-8b3f-a852f9e56fd0}" />
+          <AitFeature Name="{e6988c39-3abd-5b81-82e0-69e912d72bfa}" />
+          <AitFeature Name="{e6f2fef0-0712-487f-b313-f300b8d79aa1}" />
+          <AitFeature Name="{e75758c4-d25d-4b1d-971f-596f17f12baa}" />
+          <AitFeature Name="{e827e8b9-08d9-4a8e-a0ac-fe5ed3cbbbd3}" />
+          <AitFeature Name="{e840ab2f-8f5b-5c18-a4a1-4b3145f9fa1c}" />
+          <AitFeature Name="{e8e72666-48cc-593f-ba85-2663496956e3}" />
+          <AitFeature Name="{e9961e6e-3626-403a-afe0-040d58165632}" />
+          <AitFeature Name="{e9bdaaf0-cbf6-5c72-be90-29cbf3a1319b}" />
+          <AitFeature Name="{e9f3b9ff-8e91-4ecf-a707-c927f694f881}" />
+          <AitFeature Name="{ea0cbf91-ca36-4fad-972a-2e53a6718b9f}" />
+          <AitFeature Name="{ea0fe405-d432-5ac7-9ef8-5a65e1f97d7e}" />
+          <AitFeature Name="{ea1f89c7-ebf5-4ab8-88f7-680d821dac61}" />
+          <AitFeature Name="{ea79a752-f7c2-4265-b1bd-c4dec4e4f080}" />
+          <AitFeature Name="{ec752224-9b77-4720-bb21-4ac89fdb1afd}" />
+          <AitFeature Name="{ecae8ccd-8e5e-4fbe-9846-30a6370afcdf}" />
+          <AitFeature Name="{ecc8691b-c1db-4dc0-855e-65f6c551af49}" />
+          <AitFeature Name="{eccb574a-c684-5572-a679-6b0842cfb57f}" />
+          <AitFeature Name="{ecfa9a6f-fa2e-5345-b297-efb4e8c6be87}" />
+          <AitFeature Name="{eecd690c-1ff3-529f-923f-9b1c31fd3d0f}" />
+          <AitFeature Name="{eecf9838-c1c2-5b4a-976f-cec261ae1d55}" />
+          <AitFeature Name="{efbc9aaa-f960-5801-b4d1-2ed931b91ff9}" />
+          <AitFeature Name="{f0117ddb-12fa-4d8d-8b26-b383d09c2b3c}" />
+          <AitFeature Name="{f06a2739-9443-5ef0-b284-dc5aff3e7d10}" />
+          <AitFeature Name="{f0e24ab0-dd09-42e1-b0bc-e0e131f78d7e}" />
+          <AitFeature Name="{f1070b9f-bbac-5243-ab00-963060052d73}" />
+          <AitFeature Name="{f19104be-422a-4904-a52f-ee72010429e5}" />
+          <AitFeature Name="{f383c2cc-f326-5bbe-95d1-cbc24714ef86}" />
+          <AitFeature Name="{f3864c10-14a4-5516-b1d9-63b6579429b1}" />
+          <AitFeature Name="{f3e64d9d-f725-407e-942f-0eda189809f4}" />
+          <AitFeature Name="{f431073d-9cac-42a2-82df-0f4490bc4e2e}" />
+          <AitFeature Name="{f4706ab1-55a3-5270-afb2-732988fe8227}" />
+          <AitFeature Name="{f4a91dd8-d979-4381-8652-bda0342a765e}" />
+          <AitFeature Name="{f4b40e52-642f-4629-a54a-ea5d2349c448}" />
+          <AitFeature Name="{f5762b3c-74d4-4811-b5dc-9f8b4e2f9abf}" />
+          <AitFeature Name="{f66c6bd3-55b4-5bbb-b82a-6d9ce383091a}" />
+          <AitFeature Name="{f6790987-e6e5-47f2-92c6-eccce4ba159a}" />
+          <AitFeature Name="{f68bc421-6b54-559b-9cdd-489aad0bd41d}" />
+          <AitFeature Name="{f691cab2-77ad-4d3d-a51c-8ef9c3836456}" />
+          <AitFeature Name="{f6ce8c6d-fe96-41ad-a64a-c2b81c4af7f8}" />
+          <AitFeature Name="{f6d1f700-49c2-52ae-8154-826f9908773c}" />
+          <AitFeature Name="{f7168c00-1432-462a-9405-38f385bfc37c}" />
+          <AitFeature Name="{f744d97b-9988-44fb-abd6-5378844cfa8b}" />
+          <AitFeature Name="{f7f3a506-1e87-42d6-bcfb-b8c809fa5494}" />
+          <AitFeature Name="{f88345f8-e0a3-4be2-b90c-dc20e6d8beb0}" />
+          <AitFeature Name="{f948eac5-33eb-50f5-b5af-e7cecf0e4501}" />
+          <AitFeature Name="{f9b2e7f6-762f-50db-95dd-7f6c6ec47090}" />
+          <AitFeature Name="{fa002c1a-494e-46cf-91d4-e14a8d798674}" />
+          <AitFeature Name="{fa3f6186-4214-428c-a64c-14c9ac7315ea}" />
+          <AitFeature Name="{faaea667-fbeb-49cb-adb2-71184c556e43}" />
+          <AitFeature Name="{fb393ef3-bbac-5bd5-9144-84f23576f415}" />
+          <AitFeature Name="{fb98034c-86b7-581f-8cd9-5ad0692201a9}" />
+          <AitFeature Name="{fbc93e26-a14a-4b4f-82b0-33bed920af52}" />
+          <AitFeature Name="{fbecc739-c6fe-4de7-99cf-74c3e596e032}" />
+          <AitFeature Name="{fd104460-2e15-4ba3-8b8f-fa693a4161e9}" />
+          <AitFeature Name="{fd1d67ae-eafb-4079-be80-6dc92a03aedf}" />
+          <AitFeature Name="{fd416dfb-2a07-52eb-aae3-dfce14116c05}" />
+          <AitFeature Name="{fe2f3d47-5d47-5499-8374-430c7cda0204}" />
+          <AitFeature Name="{fe750d77-1307-5df2-a021-1c7a8d6b80ad}" />
+          <AitFeature Name="{fe945347-722f-5ca4-8056-91722ede938b}" />
+          <AitFeature Name="{fee200fb-8664-44e0-95d9-42696199bffc}" />
+          <AitFeature Name="{ff367e4a-c6c1-52e6-ac88-efcb55141703}" />
+        </AitCategory>
+        <AitCategory Id="ApiStatic">
+          <AitFeature Name="api-ms-win-core-handle-l1-1-0.dll!CloseHandle" />
+          <AitFeature Name="api-ms-win-core-handle-l1-1-0.dll!DuplicateHandle" />
+          <AitFeature Name="api-ms-win-core-profile-l1-1-0.dll!QueryPerformanceCounter" />
+          <AitFeature Name="api-ms-win-core-profile-l1-1-0.dll!QueryPerformanceFrequency" />
+          <AitFeature Name="api-ms-win-core-realtime-l1-1-0.dll!QueryUnbiasedInterruptTime" />
+          <AitFeature Name="api-ms-win-core-timezone-l1-1-0.dll!EnumDynamicTimeZoneInformation" />
+          <AitFeature Name="api-ms-win-core-timezone-l1-1-0.dll!GetDynamicTimeZoneInformation" />
+          <AitFeature Name="api-ms-win-core-timezone-l1-1-0.dll!GetDynamicTimeZoneInformationEffectiveYears" />
+          <AitFeature Name="api-ms-win-core-timezone-l1-1-0.dll!GetTimeZoneInformationForYear" />
+          <AitFeature Name="api-ms-win-core-errorhandling-l1-1-0.dll!GetLastError" />
+          <AitFeature Name="api-ms-win-core-string-l1-1-0.dll!CompareStringEx" />
+          <AitFeature Name="api-ms-win-core-string-l1-1-0.dll!CompareStringOrdinal" />
+          <AitFeature Name="api-ms-win-core-string-l1-1-0.dll!MultiByteToWideChar" />
+          <AitFeature Name="api-ms-win-core-string-l1-1-0.dll!WideCharToMultiByte" />
+          <AitFeature Name="api-ms-win-core-winrt-string-l1-1-0.dll!WindowsCreateString" />
+          <AitFeature Name="api-ms-win-core-winrt-string-l1-1-0.dll!WindowsCreateStringReference" />
+          <AitFeature Name="api-ms-win-core-winrt-string-l1-1-0.dll!WindowsDeleteString" />
+          <AitFeature Name="api-ms-win-core-winrt-string-l1-1-0.dll!WindowsGetStringRawBuffer" />
+          <AitFeature Name="api-ms-win-core-debug-l1-1-0.dll!IsDebuggerPresent" />
+          <AitFeature Name="api-ms-win-core-debug-l1-1-0.dll!OutputDebugStringW" />
+          <AitFeature Name="api-ms-win-core-synch-l1-1-0.dll!CreateEventExW" />
+          <AitFeature Name="api-ms-win-core-synch-l1-1-0.dll!CreateMutexExW" />
+          <AitFeature Name="api-ms-win-core-synch-l1-1-0.dll!OpenMutexW" />
+          <AitFeature Name="api-ms-win-core-synch-l1-1-0.dll!ResetEvent" />
+          <AitFeature Name="api-ms-win-core-synch-l1-1-0.dll!SetEvent" />
+          <AitFeature Name="api-ms-win-core-synch-l1-1-0.dll!WaitForMultipleObjectsEx" />
+          <AitFeature Name="api-ms-win-core-com-l1-1-0.dll!CoCreateFreeThreadedMarshaler" />
+          <AitFeature Name="api-ms-win-core-com-l1-1-0.dll!CoCreateGuid" />
+          <AitFeature Name="api-ms-win-core-com-l1-1-0.dll!CoGetApartmentType" />
+          <AitFeature Name="api-ms-win-core-com-l1-1-0.dll!CoGetContextToken" />
+          <AitFeature Name="api-ms-win-core-com-l1-1-0.dll!CoGetInterfaceAndReleaseStream" />
+          <AitFeature Name="api-ms-win-core-com-l1-1-0.dll!CoGetObjectContext" />
+          <AitFeature Name="api-ms-win-core-com-l1-1-0.dll!CoMarshalInterThreadInterfaceInStream" />
+          <AitFeature Name="api-ms-win-core-com-l1-1-0.dll!CoReleaseMarshalData" />
+          <AitFeature Name="api-ms-win-core-com-l1-1-0.dll!CoTaskMemAlloc" />
+          <AitFeature Name="api-ms-win-core-com-l1-1-0.dll!CoTaskMemFree" />
+          <AitFeature Name="api-ms-win-core-normalization-l1-1-0.dll!NormalizeString" />
+          <AitFeature Name="api-ms-win-core-sysinfo-l1-1-0.dll!GetSystemTimeAsFileTime" />
+          <AitFeature Name="api-ms-win-core-sysinfo-l1-1-0.dll!GetTickCount64" />
+          <AitFeature Name="api-ms-win-core-heap-l1-1-0.dll!GetProcessHeap" />
+          <AitFeature Name="api-ms-win-core-heap-l1-1-0.dll!HeapAlloc" />
+          <AitFeature Name="api-ms-win-core-heap-l1-1-0.dll!HeapFree" />
+          <AitFeature Name="api-ms-win-core-heap-l1-1-0.dll!HeapReAlloc" />
+          <AitFeature Name="api-ms-win-eventing-provider-l1-1-0.dll!EventRegister" />
+          <AitFeature Name="api-ms-win-eventing-provider-l1-1-0.dll!EventSetInformation" />
+          <AitFeature Name="api-ms-win-eventing-provider-l1-1-0.dll!EventUnregister" />
+          <AitFeature Name="api-ms-win-eventing-provider-l1-1-0.dll!EventWriteTransfer" />
+          <AitFeature Name="api-ms-win-core-winrt-robuffer-l1-1-0.dll!RoGetBufferMarshaler" />
+          <AitFeature Name="api-ms-win-core-winrt-error-l1-1-0.dll!GetRestrictedErrorInfo" />
+          <AitFeature Name="api-ms-win-core-winrt-error-l1-1-0.dll!RoOriginateError" />
+          <AitFeature Name="api-ms-win-core-winrt-error-l1-1-0.dll!SetRestrictedErrorInfo" />
+          <AitFeature Name="api-ms-win-core-processthreads-l1-1-0.dll!GetCurrentThreadId" />
+          <AitFeature Name="api-ms-win-core-winrt-l1-1-0.dll!RoGetActivationFactory" />
+          <AitFeature Name="api-ms-win-core-winrt-l1-1-0.dll!RoInitialize" />
+          <AitFeature Name="api-ms-win-core-localization-l2-1-0.dll!EnumCalendarInfoExEx" />
+          <AitFeature Name="api-ms-win-core-localization-l2-1-0.dll!EnumTimeFormatsEx" />
+          <AitFeature Name="api-ms-win-core-localization-l1-2-0.dll!FormatMessageW" />
+          <AitFeature Name="api-ms-win-core-localization-l1-2-0.dll!GetCPInfo" />
+          <AitFeature Name="api-ms-win-core-localization-l1-2-0.dll!GetCalendarInfoEx" />
+          <AitFeature Name="api-ms-win-core-localization-l1-2-0.dll!GetLocaleInfoEx" />
+          <AitFeature Name="api-ms-win-core-localization-l1-2-0.dll!LCMapStringEx" />
+          <AitFeature Name="api-ms-win-core-localization-l1-2-0.dll!ResolveLocaleName" />
+          <AitFeature Name="api-ms-win-core-sysinfo-l1-2-0.dll!GetNativeSystemInfo" />
+          <AitFeature Name="api-ms-win-core-libraryloader-l1-2-0.dll!FindStringOrdinal" />
+          <AitFeature Name="api-ms-win-core-processenvironment-l1-2-0.dll!GetCommandLineW" />
+          <AitFeature Name="api-ms-win-core-errorhandling-l1-1-1.dll!GetLastError" />
+          <AitFeature Name="api-ms-win-core-errorhandling-l1-1-1.dll!SetLastError" />
+          <AitFeature Name="api-ms-win-core-winrt-error-l1-1-1.dll!RoOriginateLanguageException" />
+          <AitFeature Name="api-ms-win-core-winrt-error-l1-1-1.dll!RoReportUnhandledError" />
+          <AitFeature Name="api-ms-win-core-localization-l1-2-1.dll!FindNLSStringEx" />
+          <AitFeature Name="api-ms-win-core-localization-l1-2-1.dll!FormatMessageA" />
+          <AitFeature Name="api-ms-win-core-localization-l1-2-1.dll!IdnToAscii" />
+          <AitFeature Name="api-ms-win-core-localization-l1-2-1.dll!IdnToUnicode" />
+          <AitFeature Name="api-ms-win-core-localization-l1-2-1.dll!IsValidLocaleName" />
+          <AitFeature Name="api-ms-win-core-localization-l1-2-1.dll!ResolveLocaleName" />
+          <AitFeature Name="api-ms-win-core-sysinfo-l1-2-1.dll!GetNativeSystemInfo" />
+          <AitFeature Name="api-ms-win-core-processthreads-l1-1-2.dll!GetCurrentProcessId" />
+          <AitFeature Name="api-ms-win-core-processthreads-l1-1-2.dll!GetCurrentThreadId" />
+          <AitFeature Name="api-ms-win-core-memory-l1-1-2.dll!VirtualQuery" />
+          <AitFeature Name="oleaut32.dll!SysFreeString" />
+          <AitFeature Name="oleaut32.dll!SysStringLen" />
+          <AitFeature Name="clrcompression.dll!deflate" />
+          <AitFeature Name="clrcompression.dll!deflateEnd" />
+          <AitFeature Name="clrcompression.dll!deflateInit2_" />
+          <AitFeature Name="clrcompression.dll!inflateEnd" />
+        </AitCategory>
+        <AitCategory Id="WRTClassFromSearch">
+          <AitFeature Name="Windows.Storage.ApplicationData" />
+          <AitFeature Name="Windows.Web.Http.HttpMethod" />
+          <AitFeature Name="Windows.UI.Xaml.Controls.Page" />
+          <AitFeature Name="Windows.ApplicationModel.Package" />
+          <AitFeature Name="Windows.Web.Http.HttpRequestMessage" />
+          <AitFeature Name="Windows.UI.Xaml.Controls.Frame" />
+          <AitFeature Name="Windows.Data.Json.JsonValue" />
+          <AitFeature Name="Windows.Foundation.Uri" />
+          <AitFeature Name="Windows.Security.Credentials.PasswordCredential" />
+          <AitFeature Name="Windows.System.Threading.ThreadPool" />
+          <AitFeature Name="Windows.UI.Xaml.Controls.UserControl" />
+          <AitFeature Name="Windows.Globalization.GeographicRegion" />
+          <AitFeature Name="Windows.System.Profile.HardwareIdentification" />
+          <AitFeature Name="Windows.UI.Xaml.Application" />
+          <AitFeature Name="Windows.Graphics.Display.DisplayInformation" />
+          <AitFeature Name="Windows.Globalization.Calendar" />
+          <AitFeature Name="Windows.Foundation.Diagnostics.AsyncCausalityTracer" />
+          <AitFeature Name="Windows.Storage.Streams.DataReader" />
+          <AitFeature Name="Windows.Security.Cryptography.Core.HashAlgorithmProvider" />
+          <AitFeature Name="Windows.Security.Cryptography.CryptographicBuffer" />
+          <AitFeature Name="Windows.ApplicationModel.Resources.Core.ResourceManager" />
+          <AitFeature Name="Windows.Security.Authentication.Web.WebAuthenticationBroker" />
+          <AitFeature Name="Windows.System.Threading.ThreadPoolTimer" />
+          <AitFeature Name="Windows.UI.Xaml.DispatcherTimer" />
+          <AitFeature Name="Windows.UI.Xaml.Media.VisualTreeHelper" />
+          <AitFeature Name="Windows.Web.Http.Filters.HttpBaseProtocolFilter" />
+          <AitFeature Name="Windows.Security.Cryptography.Core.HashAlgorithmNames" />
+          <AitFeature Name="Windows.Security.Cryptography.Certificates.CertificateStores" />
+          <AitFeature Name="Windows.UI.Xaml.Interop.NotifyCollectionChangedEventArgs" />
+          <AitFeature Name="Windows.UI.Xaml.Data.PropertyChangedEventArgs" />
+          <AitFeature Name="Windows.Globalization.CalendarIdentifiers" />
+          <AitFeature Name="Windows.Data.Json.JsonObject" />
+          <AitFeature Name="Windows.Devices.Enumeration.Pnp.PnpObject" />
+          <AitFeature Name="Windows.Data.Xml.Dom.XmlDocument" />
+          <AitFeature Name="Windows.Web.Http.HttpStreamContent" />
+          <AitFeature Name="Windows.ApplicationModel.Resources.Core.ResourceContext" />
+          <AitFeature Name="Windows.UI.Xaml.Window" />
+          <AitFeature Name="Windows.UI.Core.CoreWindow" />
+          <AitFeature Name="Windows.Data.Json.JsonArray" />
+          <AitFeature Name="Windows.Security.Cryptography.Certificates.CertificateQuery" />
+        </AitCategory>
+      </AitFile>
+      <AitFile ErrorCode="0" Name="Lane.exe" Id="0000d1fc9fedd347df6db923dd16c0f264e536ce4702" />
+    </AitStaticAnalysis>
+  </DEPENDENCY_INFORMATION>
+</REPORT>

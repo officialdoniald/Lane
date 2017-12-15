@@ -1,0 +1,3 @@
+MainPackage=C:\Users\Doniald\Desktop\ManualReference\Lane\Lane\bin\ARM\Release\Lane_1.1.8.0_ARM.appx
+SymbolPackage=C:\Users\Doniald\Desktop\ManualReference\Lane\Lane\AppPackages\Lane_1.1.8.0\Lane_1.1.8.0_ARM.appxsym
+ResourcePack=C:\Users\Doniald\Desktop\ManualReference\Lane\Lane\bin\ARM\Release\Lane_1.1.8.0_language-en.appx

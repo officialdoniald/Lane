@@ -1,0 +1,2 @@
+MainPackage=C:\Users\Doniald\Desktop\ManualReference\Lane\Lane\bin\x64\Release\Upload\Lane_1.1.8.0_x64.appx
+SymbolPackage=C:\Users\Doniald\Desktop\ManualReference\Lane\Lane\AppPackages\Lane_1.1.8.0\Lane_1.1.8.0_x64.appxsym

@@ -1,0 +1,9 @@
+/ignoreAccessChecks
+/metadataFile "C:\Users\Doniald\Desktop\ManualReference\Lane\Lane\obj\x64\Release\ilc\intermediate\ILTransformed\Lane.metadata"
+/gvmAssemblyName "System.Private.CoreLib"
+/o
+/sharedGenerics
+/ilmergeinfo "C:\Users\Doniald\Desktop\ManualReference\Lane\Lane\obj\x64\Release\ilc\intermediate\ILTransformed\Lane.csv"
+/sharedGenericsMode StandardHeuristics
+/in "C:\Users\Doniald\Desktop\ManualReference\Lane\Lane\obj\x64\Release\ilc\intermediate\ILTransformed\Lane.ilexe"
+/out "C:\Users\Doniald\Desktop\ManualReference\Lane\Lane\obj\x64\Release\ilc\intermediate\MDIL\Lane.mdilexe"
